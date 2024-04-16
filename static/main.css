@@ -122,10 +122,13 @@ button {
     color: gray;
 }
 
-.draggable {
-    display: inline-block;
+.color_block {
     width: 180px;
     height: 100px;
+}
+
+.draggable {
+    display: inline-block;
     margin-right: 10px;
     background-color: blue;
     z-index: 1;
@@ -134,6 +137,29 @@ button {
 .padding {
     padding: 15px;
 }
+
+.order-container {
+    padding: 20px;
+    display: flex;
+    width: max-content;
+    background-color: black;
+}
+
+.reorder {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    background-color: blue;
+    z-index: 1;
+}
+
+#check {
+    margin-top: 80px;
+}
+
+/* COLORS */
   
 .f52c10ff {
     background-color: #f52c10ff;

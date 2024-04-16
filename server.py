@@ -41,5 +41,23 @@ def drag_and_drop():
 
     return render_template('drag_and_drop.html', data=data)
 
+@app.route('/reorder')
+def reorder():
+    """_summary_
+
+    Returns:
+        _type_: _description_
+    """
+
+    data = {
+        "title": "Chroma",
+        "class1": "MUTED",
+        "class2": "SATURATED",
+        "colors": ["f52c10ff", "bd0c42ff", "fc5f47ff", "ca3b1eff", "fa2f56ff", "d72942ff"]
+# "colors": ["8f6190ff", "797979ff", "b055b1ff", "887086ff", "c44acaff", "9e5ca1ff"] real colors
+    }
+
+    return render_template('reorder.html', data=data)
+
 if __name__ == '__main__':
     app.run(debug = True)
