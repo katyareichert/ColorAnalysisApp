@@ -22,5 +22,13 @@
             <div class="drop-target">drop here</div>
         </div>
     </div>
+
+    <div class="center">
+        <button class="btn btn-outline-success" type="submit">Check</button>
+    </div>
     
+{% endblock %}
+
+{% block scripts %}
+    <script src="{{url_for('static', filename='dragndrop.js')}}"></script>
 {% endblock %}

@@ -89,11 +89,6 @@ button {
     border: 1px solid antiquewhite;
 }
 
-#start_button {
-    text-align: center;
-    margin: auto;
-}
-
 .center {
     text-align: center;
 }
@@ -112,6 +107,7 @@ button {
     background-color: lightgray;
     height: 350px;
     width: auto;
+    z-index: 0;
 }
 
 .bottom-padding {
@@ -132,9 +128,33 @@ button {
     height: 100px;
     margin-right: 10px;
     background-color: blue;
+    z-index: 1;
   }
 
-  .padding {
+.padding {
     padding: 15px;
-  }
+}
   
+.f52c10ff {
+    background-color: #f52c10ff;
+}
+
+.bd0c42ff {
+    background-color: #bd0c42ff;
+}
+
+.fc5f47ff {
+    background-color: #fc5f47ff;
+}
+
+.ca3b1eff {
+    background-color: #Ca3b1eff;
+}
+
+.fa2f56ff {
+    background-color: #fa2f56ff;
+}
+
+.d72942ff {
+    background-color: #d72942ff;
+}
