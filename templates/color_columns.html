@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% extends "layout.html" %}
+
+{% block content %}
+    <div class="center bottom-padding bottom-margin">
+        <h1>{{data.title}}</h1>
+    </div>
+
+    <div class="row">
+        <div class="col-3">
+            <h3 class="center">{{data.class1}}</h3>
+            {{data.description1}}
+        </div>
+        <div class="col-3 center padding">
+            <div class="bottom-padding"></div>
+            {% for color in data.colors1 %}
+                <div class="color_block {{color}}"></div>          
+            {% endfor %}
+        </div>
+        <div class="col-3 center padding">
+            <div class="bottom-padding"></div>
+            {% for color in data.colors2 %}
+                <div class="color_block {{color}}"></div>          
+            {% endfor %}
+        </div>
+        <div class="col-3">
+            <h3 class="center">{{data.class2}}</h3>
+            <span class="right-align">{{data.description2}}</span>
+        </div>
+    </div>
+
+    <div class="center">
+        <button class="btn btn-outline-success" type="submit">Continue</button>
+    </div>
+    
+{% endblock %}
+
+{% block scripts %}
+    <script src="{{url_for('static', filename='dragndrop.js')}}"></script>
+{% endblock %}

@@ -122,14 +122,18 @@ button {
     color: gray;
 }
 
+.right-align {
+    text-align: right;
+}
+
 .color_block {
     width: 180px;
     height: 100px;
+    display: inline-block;
+    margin-right: 10px;
 }
 
 .draggable {
-    display: inline-block;
-    margin-right: 10px;
     background-color: blue;
     z-index: 1;
   }
@@ -161,8 +165,8 @@ button {
 
 /* COLORS */
   
-.f52c10ff {
-    background-color: #f52c10ff;
+.f53310ff {
+    background-color: #f53310ff;
 }
 
 .bd0c42ff {
