@@ -99,5 +99,42 @@ button {
 }
 
 #navbarNav {
-    margin-left: 120px;
+    margin-left: 140px;
 }
+
+.green {
+    background-color: var(--green);
+}
+
+.drop-target {
+    text-align: center;
+    color: gray;
+    background-color: lightgray;
+    height: 350px;
+    width: auto;
+}
+
+.bottom-padding {
+    padding-bottom: 20px; 
+}
+
+.bottom-margin {
+    margin-bottom: 20px;
+}
+
+.light {
+    color: gray;
+}
+
+.draggable {
+    display: inline-block;
+    width: 180px;
+    height: 100px;
+    margin-right: 10px;
+    background-color: blue;
+  }
+
+  .padding {
+    padding: 15px;
+  }
+  

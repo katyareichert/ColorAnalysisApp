@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% extends "layout.html" %}
+
+{% block content %}
+    <div class="center bottom-padding bottom-margin">
+        <h1>{{data.title}}</h1>
+    </div>
+
+    <div class="row">
+        <div class="col-3 center">
+            <h3>{{data.class1}}</h3>
+            <div class="drop-target">drop here</div>
+        </div>
+        <div class="col-6 center padding">
+            <div class="light bottom-padding">drag and drop</div>
+            {% for color in data.colors %}
+                <div class="draggable {{color}}"></div>          
+            {% endfor %}
+        </div>
+        <div class="col-3 center">
+            <h3>{{data.class2}}</h3>
+            <div class="drop-target">drop here</div>
+        </div>
+    </div>
+    
+{% endblock %}
