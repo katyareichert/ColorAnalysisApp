@@ -53,8 +53,7 @@ def reorder():
         "title": "Chroma",
         "class1": "MUTED",
         "class2": "SATURATED",
-        "colors": ["f53310ff", "bd0c42ff", "fc5f47ff", "ca3b1eff", "fa2f56ff", "d72942ff"]
-# "colors": ["8f6190ff", "797979ff", "b055b1ff", "887086ff", "c44acaff", "9e5ca1ff"] real colors
+        "colors": ["8f6190ff", "797979ff", "b055b1ff", "887086ff", "c44acaff", "9e5ca1ff"]
     }
 
     return render_template('reorder.html', data=data)
