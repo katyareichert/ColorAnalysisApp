@@ -162,3 +162,23 @@ button {
 #check {
     margin-top: 80px;
 }
+
+.subheader-left {
+    position: absolute;
+    padding-left: 20px;
+}
+
+.subheader-right {
+    position: absolute;
+    transform: translateX(-104%);
+}
+
+.image-container {
+    overflow: hidden;
+    position: relative;
+    height: 500px;
+}
+
+.spacer {
+    height: 100px;
+}

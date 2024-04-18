@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% extends "layout.html" %}
+
+{% block content %}
+    <div class="row">
+
+        <div class="col-3 image-container">
+            <img class="subheader-left" src={{data.left}}>
+        </div>
+
+
+        <div class="col-6">
+            <div class="spacer"></div>
+
+            <div class="center bottom-padding bottom-margin">
+                <h1>{{data.title}}</h1>
+            </div>
+        
+            <p class="center">{{data.description}}</p>
+        
+            <div class="center">
+                <button class="btn btn-outline-success" id="check" type="submit">Continue</button>
+            </div>
+        </div>
+
+        <div class="col-3 image-container right-align">
+            <img class="subheader-right" src={{data.right}}>
+        </div>
+    </div>
+    
+{% endblock %}

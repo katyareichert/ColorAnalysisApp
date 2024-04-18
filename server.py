@@ -74,38 +74,76 @@ def chroma(lesson):
     """
     return 0
 
-# HIDDEN TEST ROUTES -------------------------------------
+# HIDDEN TEST ROUTES ------------------------------------
+
+@app.route('/mod')
+def module_subheader(
+    title = "Undertone",
+    description = "The subtle hue or color that lies beneath the surface of a primary color, influencing its overall appearance.",
+    left_img = "https://cdn.vectorstock.com/i/500p/20/11/color-whell-to-white-vector-2992011.jpg",
+    right_img = "https://cdn.vectorstock.com/i/500p/20/11/color-whell-to-white-vector-2992011.jpg"
+):
+    """
+    Module section header test page
+
+    Returns: render template
+    """
+
+    data = {
+        "title": title,
+        "description": description,
+        "left": left_img,
+        "right": right_img
+    }
+
+    return render_template('subheader.html', data=data)
 
 @app.route('/dnd')
-def drag_and_drop():
+def drag_and_drop(
+    colors,
+    title = "Undertone",
+    class1 = "COOL",
+    class2 = "WARM"
+):
     """
     Drag and Drop activity test page
 
     Returns: render template
     """
 
+    if not colors or colors == []:
+        colors = ["f53310ff", "bd0c42ff", "fc5f47ff", "ca3b1eff", "fa2f56ff", "d72942ff"]
+
     data = {
-        "title": "Undertone",
-        "class1": "COOL",
-        "class2": "WARM",
-        "colors": ["f53310ff", "bd0c42ff", "fc5f47ff", "ca3b1eff", "fa2f56ff", "d72942ff"]
+        "title": title,
+        "class1": class1,
+        "class2": class2,
+        "colors": colors
     }
 
     return render_template('drag_and_drop.html', data=data)
 
 @app.route('/reorder')
-def reorder():
+def reorder(
+    colors,
+    title = "Chroma",
+    class1 = "MUTED",
+    class2 = "SATURATED"
+):
     """
     Reorder activity test page
 
     Returns: render template
     """
 
+    if not colors or colors == []:
+        colors = ["8f6190ff", "797979ff", "b055b1ff", "887086ff", "c44acaff", "9e5ca1ff"]
+
     data = {
-        "title": "Chroma",
-        "class1": "MUTED",
-        "class2": "SATURATED",
-        "colors": ["8f6190ff", "797979ff", "b055b1ff", "887086ff", "c44acaff", "9e5ca1ff"]
+        "title": title,
+        "class1": class1,
+        "class2": class2,
+        "colors": colors
     }
 
     return render_template('reorder.html', data=data)
