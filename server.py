@@ -9,11 +9,6 @@ from flask import render_template#, redirect
 
 app = Flask(__name__)
 
-regions = ["Western Region", "Central Region", "Eastern Region"]
-stadiums = []
-
-# current_id = 10
-
 # ROUTES
 @app.route('/')
 def welcome():
@@ -21,17 +16,16 @@ def welcome():
     Homescreen with quick button to start learning.
     TODO: Information block content
 
-    Returns:
-        _type_: _description_
+    Returns: render template
     """
     return render_template('index.html')
 
 @app.route('/learn/<module>/<lesson>')
 def learn(module, lesson):
-    """_summary_
+    """
+    Main route to organize learning into modules and track user progress
 
-    Returns:
-        _type_: _description_
+    Returns: render template
     """
 
     if module == "undertone":
@@ -43,23 +37,51 @@ def learn(module, lesson):
 
     return "Error 404: Page does not exist"
 
+quiz_items = [
+    ("", {
+        "question": "",
+        "media": []
+    })
+]
+
+@app.route('/quiz/<question>')
+def quiz(question):
+    """
+    Main route to organize learning into modules and track user progress
+
+    Returns: render template
+    """
+
+    return render_template(quiz_items[question][0], data = quiz_items[question][1])
+
+# MODULES - HELPER ROUTES ------------------------------
+
 def undertone(lesson):
+    """
+    Undertone Module
+    """
     return 0
 
 def value(lesson):
+    """
+    Value Module
+    """
     return 0
 
 def chroma(lesson):
+    """
+    Chroma Module
+    """
     return 0
 
-# HELPER ROUTES ------------------------------------------------
+# HIDDEN TEST ROUTES -------------------------------------
 
 @app.route('/dnd')
 def drag_and_drop():
-    """_summary_
+    """
+    Drag and Drop activity test page
 
-    Returns:
-        _type_: _description_
+    Returns: render template
     """
 
     data = {
@@ -73,10 +95,10 @@ def drag_and_drop():
 
 @app.route('/reorder')
 def reorder():
-    """_summary_
+    """
+    Reorder activity test page
 
-    Returns:
-        _type_: _description_
+    Returns: render template
     """
 
     data = {
@@ -90,10 +112,10 @@ def reorder():
 
 @app.route('/cc')
 def color_columns():
-    """_summary_
+    """
+    Two Column information test page
 
-    Returns:
-        _type_: _description_
+    Returns: render template
     """
 
     data = {
