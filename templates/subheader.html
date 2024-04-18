@@ -5,7 +5,7 @@
     <div class="row">
 
         <div class="col-3 image-container">
-            <img class="subheader-left" src={{data.left}}>
+            <img class="subheader-left" src={{data.left_img}}>
         </div>
 
 
@@ -19,13 +19,17 @@
             <p class="center">{{data.description}}</p>
         
             <div class="center">
-                <button class="btn btn-outline-success" id="check" type="submit">Continue</button>
+                <button class="btn btn-outline-success" id="next" type="submit">Continue</button>
             </div>
         </div>
 
         <div class="col-3 image-container right-align">
-            <img class="subheader-right" src={{data.right}}>
+            <img class="subheader-right" src={{data.right_img}}>
         </div>
     </div>
     
+{% endblock %}
+
+{% block scripts %}
+    <script src="{{url_for('static', filename='next_lesson.js')}}"></script>
 {% endblock %}

@@ -30,11 +30,12 @@
     </div>
 
     <div class="center">
-        <button class="btn btn-outline-success" type="submit">Continue</button>
+        <button class="btn btn-outline-success" id="next" type="submit">Continue</button>
     </div>
     
 {% endblock %}
 
 {% block scripts %}
     <script src="{{url_for('static', filename='dragndrop.js')}}"></script>
+    <script src="{{url_for('static', filename='next_lesson.js')}}"></script>
 {% endblock %}
