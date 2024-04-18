@@ -17,12 +17,42 @@ stadiums = []
 # ROUTES
 @app.route('/')
 def welcome():
-    """_summary_
+    """
+    Homescreen with quick button to start learning.
+    TODO: Information block content
 
     Returns:
         _type_: _description_
     """
     return render_template('index.html')
+
+@app.route('/learn/<module>/<lesson>')
+def learn(module, lesson):
+    """_summary_
+
+    Returns:
+        _type_: _description_
+    """
+
+    if module == "undertone":
+        return undertone(lesson)
+    if module == "value":
+        return value(lesson)
+    if module == "chroma":
+        return chroma(lesson)
+
+    return "Error 404: Page does not exist"
+
+def undertone(lesson):
+    return 0
+
+def value(lesson):
+    return 0
+
+def chroma(lesson):
+    return 0
+
+# HELPER ROUTES ------------------------------------------------
 
 @app.route('/dnd')
 def drag_and_drop():
@@ -70,8 +100,8 @@ def color_columns():
         "title": "Undertone",
         "class1": "COOL",
         "class2": "WARM",
-        "colors1": ["f53310ff", "ca3b1eff", "fc5f47ff"],
-        "colors2": ["bd0c42ff", "fa2f56ff", "d72942ff"],
+        "colors1": ["bd0c42ff", "fa2f56ff", "d72942ff"],
+        "colors2": ["f53310ff", "ca3b1eff", "fc5f47ff"],
         "description1": """A cool red leans more towards purple, 
             suggesting calmness, depth, and similarity to ripe cranberries.""",
         "description2": """A warm red has hints of orange, embodying vibrancy, 
