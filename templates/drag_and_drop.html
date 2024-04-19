@@ -9,22 +9,25 @@
     <div class="row">
         <div class="col-3 center">
             <h3>{{data.class1}}</h3>
-            <div class="drop-target">drop here</div>
+            <div class="drop-target drop-target1">drop here</div>
         </div>
         <div class="col-6 center padding">
-            <div class="light bottom-padding">drag and drop</div>
-            {% for color in data.colors %}
-                <div class="draggable color_block" style="background-color: #{{color}};"></div>          
+            <div class="light bottom-padding" id="dnd_container">drag and drop</div>
+            {% for color in data.colors1 %}
+                <div class="draggable draggable1 color_block" style="background-color: #{{color}};"></div>          
+            {% endfor %}
+            {% for color in data.colors2 %}
+                <div class="draggable draggable2 color_block" style="background-color: #{{color}};"></div>          
             {% endfor %}
         </div>
         <div class="col-3 center">
             <h3>{{data.class2}}</h3>
-            <div class="drop-target">drop here</div>
+            <div class="drop-target drop-target2">drop here</div>
         </div>
     </div>
 
     <div class="center">
-        <button class="btn btn-outline-success" type="submit">Check</button>
+        <button class="btn btn-outline-success" id="next" type="submit">Continue</button>
     </div>
     
 {% endblock %}

@@ -105,7 +105,8 @@ button {
     text-align: center;
     color: gray;
     background-color: lightgray;
-    height: 350px;
+    min-height: 360px;
+    padding: 20px;
     width: auto;
     z-index: 0;
 }
@@ -131,6 +132,9 @@ button {
     height: 100px;
     display: inline-block;
     margin-right: 10px;
+    color: black;
+    text-align: center;
+    padding-top: 30px;
 }
 
 .draggable {
@@ -181,4 +185,8 @@ button {
 
 .spacer {
     height: 100px;
+}
+
+.push_right {
+    margin-left: 15px;
 }

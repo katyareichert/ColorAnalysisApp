@@ -79,7 +79,8 @@ def dnd():
             "title": "Undertone",
             "class1": "COOL",
             "class2": "WARM",
-            "colors": ["f53310ff", "bd0c42ff", "fc5f47ff", "ca3b1eff", "fa2f56ff", "d72942ff"]
+            "colors1": ["bd0c42ff", "fa2f56ff", "d72942ff"],
+            "colors2": ["f53310ff", "ca3b1eff", "fc5f47ff"],
         })
 def drag_and_drop(data):
     """
@@ -138,6 +139,8 @@ lesson_items = {
     "undertone": [
         (module_subheader, {
             "title": "Undertone",
+            "lesson_id": "undertone/0",
+            "next_lesson": "/learn/undertone/1",
             "description": """The subtle hue or color that lies beneath the
                 surface of a primary color, influencing its overall appearance.""",
             "left_img": 
@@ -147,12 +150,17 @@ lesson_items = {
         }),
         (drag_and_drop, {
             "title": "Undertone",
+            "lesson_id": "undertone/1",
+            "next_lesson": "/learn/undertone/2",
             "class1": "COOL",
             "class2": "WARM",
-            "colors": ["bd0c42ff", "fa2f56ff", "d72942ff", "f53310ff", "ca3b1eff", "fc5f47ff"]
+            "colors1": ["bd0c42ff", "fa2f56ff", "d72942ff"],
+            "colors2": ["f53310ff", "ca3b1eff", "fc5f47ff"],
         }),
         (color_columns, {
             "title": "Undertone",
+            "lesson_id": "undertone/2",
+            "next_lesson": "/learn/undertone/1",
             "class1": "COOL",
             "class2": "WARM",
             "colors1": ["bd0c42ff", "fa2f56ff", "d72942ff"],
