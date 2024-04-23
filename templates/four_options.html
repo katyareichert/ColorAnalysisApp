@@ -3,18 +3,22 @@
 
 {% block content %}
     <div class="center bottom-padding bottom-margin">
+        <p>{{data.pre}}</p>
         <h2>{{data.question}}</h2>
     </div>
 
     <div class="row bottom-margin">
-        <div class="col-2"></div>
-        <div class="col-4 center">
+        <div class="col-3 center">
             <img class="tot" src={{data.image1}} id="option1">
-            <h3>{{data.option1}}</h3>
         </div>
-        <div class="col-4 center">
+        <div class="col-3 center">
             <img class="tot" src={{data.image2}} id="option2">
-            <h3>{{data.option2}}</h3>
+        </div>
+        <div class="col-3 center">
+            <img class="tot" src={{data.image3}} id="option3">
+        </div>
+        <div class="col-3 center">
+            <img class="tot" src={{data.image4}} id="option4">
         </div>
     </div>
 
@@ -29,7 +33,7 @@
 {% endblock %}
 
 {% block scripts %}
-    <script src="{{url_for('static', filename='thisorthat.js')}}"></script>
+    <script src="{{url_for('static', filename='four_options.js')}}"></script>
     <script>
         var ans = {{data.answer|tojson}};
         var question_id = {{data.id|tojson}}; 

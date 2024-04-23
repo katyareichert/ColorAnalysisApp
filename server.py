@@ -158,6 +158,14 @@ def this_or_that(data):
     """
     return render_template('thisorthat.html', data=data)
 
+def four_options(data):
+    """
+    This or that question test page
+
+    Returns: render template
+    """
+    return render_template('four_options.html', data=data)
+
 @app.route('/get_score', methods=['GET'])
 def get_score():
     """
@@ -188,6 +196,39 @@ def update_score():
         return jsonify(score=SCORE, next_question_url="/quiz/score")
 
     return jsonify(score=SCORE, next_question_url = next_question_url)
+
+@app.route('/quiz/score')
+def quiz_score():
+    """
+    Show final quiz results
+    """
+
+    total = len(quiz_items)
+    description = str(SCORE) + "/" + str(total) + "\n"
+
+    if SCORE > (2*total)//3:
+        title = "Yaaas, queen!"
+        description = description + """You're slaying it with an amazing score,
+        showing off your fierce knowledge and style!"""
+
+    elif SCORE > total//3:
+        title = "Looking good, hun!"
+        description = description +  """Your score is on point,showing
+        you've got the basics down, but there's always room to accessorize and level up."""
+
+    else:
+        title = "Go piss, girl..."
+        description = description +  """Let's glam up that score by giving
+        those learn tabs another twirl, it's all about the journey, right?"""
+
+    return module_subheader(data = {
+            "title": title,
+            "description": description,
+            "left_img": 
+                "https://cdn.vectorstock.com/i/500p/20/11/color-whell-to-white-vector-2992011.jpg",
+            "right_img": 
+                "https://cdn.vectorstock.com/i/500p/20/11/color-whell-to-white-vector-2992011.jpg",
+        })
 
 # DATA
 
@@ -289,6 +330,16 @@ quiz_items = [
             "image1": "https://i.pinimg.com/originals/a2/3f/a1/a23fa1bcb86837a3de07c4a6bad7ad06.jpg",
             "image2": "https://i.pinimg.com/564x/d0/9f/2b/d09f2bafd306de9d50eef5491ca1ad8a.jpg",
             "answer": 1,
+    }),
+    (four_options, {
+            "id": 3,
+            "pre": "Which outfit's colors are",
+            "question": "muted and low contrast?",
+            "image1": "https://i.pinimg.com/originals/33/c8/03/33c8034beecb68833bde88b26f5c3385.jpg",
+            "image2": "https://i.pinimg.com/originals/01/a4/5a/01a45a4f7899c7493b9bc5c1382c0dd2.jpg",
+            "image3": "https://i.pinimg.com/originals/34/77/03/34770356b8d4c6dca8afb3128073fbe5.jpg",
+            "image4": "https://i.pinimg.com/originals/3c/4e/5c/3c4e5c5cf71c6d393b32972d0109de37.jpg",
+            "answer": 3,
     }),
 ]
 

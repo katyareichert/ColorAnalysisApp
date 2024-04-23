@@ -1,5 +1,6 @@
 :root {
-    --dark-gray: #9692d4;
+    --dark-gray: rgb(60, 60, 60);
+    --lilac: #9692d4;
     --yellow: #FFC1CC;
     --green: rgb(63, 86, 42);
     --off-white: rgb(228, 226, 226);
@@ -29,7 +30,7 @@ img {
 }
 
 nav {
-    background-color: var(--dark-gray);
+    background-color: var(--lilac);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -37,7 +38,7 @@ nav {
 }
 
 .navbar {
-    padding: 15px 50px;
+    padding: 15px 50px 10px;
 }
 
 .logo img {
