@@ -1,7 +1,38 @@
+function getScore() {
+    $.ajax({
+        url: '/get_score',
+        type: 'GET',
+        success: function(response) {
+            $('#score').text(response.score);
+        },
+        error: function(xhr, status, error) {
+            console.error('Error fetching score:', error);
+        }
+    });
+}
+
+function updateScore() {
+    $.ajax({
+        url: '/update_score',
+        type: 'POST',
+        data: { correct_answer: true },
+        success: function(response) {
+            $('#score').text(response.score);
+        },
+        error: function(xhr, status, error) {
+            console.error('Error updating score:', error);
+        }
+    });
+}
+
 $(document).ready(function() {
-    // Attach click event handler to the images
+
+    getScore();
+
+    // Option 1
     $("#option1").click(function() {
         if (1 === ans) {
+            updateScore();
             $("#option1").animate({
                 borderWidth: "10px",
                 borderColor: "green"
@@ -17,8 +48,10 @@ $(document).ready(function() {
         }
     });
 
+    // Option 2
     $("#option2").click(function() {
         if (2 === ans) {
+            updateScore();
             $(this).animate({
                 borderWidth: "10px",
                 borderColor: "green"

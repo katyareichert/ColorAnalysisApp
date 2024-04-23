@@ -5,7 +5,7 @@
 # from random import randrange
 from flask import Flask
 from flask import render_template#, redirect
-# from flask import request, jsonify
+from flask import jsonify, request
 
 app = Flask(__name__)
 
@@ -155,10 +155,27 @@ def this_or_that(data):
     """
     return render_template('thisorthat.html', data=data)
 
+@app.route('/get_score', methods=['GET'])
+def get_score():
+    """
+    Return the current quiz score
+    """
+    return jsonify(score=SCORE)
+
+@app.route('/update_score', methods=['POST'])
+def update_score():
+    """
+    Update the quiz score
+    """
+    global SCORE
+    SCORE += 1
+
+    return jsonify(score=SCORE)
+
 # DATA
 
 LESSON = ("undertone", 0)
-SCORE = 0
+SCORE = 3
 
 lesson_items = {
     "undertone": [
