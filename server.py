@@ -50,6 +50,43 @@ def quiz(question):
     except ValueError:
         return "Error 404: Page does not exist"
 
+@app.route('/quiz/score')
+def quiz_score():
+    """
+    Show final quiz results
+    """
+
+    total = len(quiz_items)
+    score = str(SCORE) + "/" + str(total)
+    description = ""
+
+    if SCORE > (2*total)//3:
+        title = "Yaaas, queen!"
+        description = """You're slaying it with an amazing score,
+        showing off your fierce knowledge and style!"""
+
+    elif SCORE > total//3:
+        title = "Looking good, hun!"
+        description = """Your score is on point,showing
+        you've got the basics down, but there's always room to accessorize and level up."""
+
+    else:
+        title = "Go piss, girl..."
+        description = """Let's glam up that score by giving
+        those learn tabs another twirl, it's all about the journey, right?"""
+
+    data = {
+            "title": title,
+            "description": description,
+            "score": score,
+            "left_img": 
+                "https://cdn.vectorstock.com/i/500p/20/11/color-whell-to-white-vector-2992011.jpg",
+            "right_img": 
+                "https://cdn.vectorstock.com/i/500p/20/11/color-whell-to-white-vector-2992011.jpg",
+        }
+
+    return render_template('quiz_score.html', data=data)
+
 # HIDDEN HELPER ROUTES ------------------------------------
 
 @app.route('/mod')
@@ -197,39 +234,6 @@ def update_score():
 
     return jsonify(score=SCORE, next_question_url = next_question_url)
 
-@app.route('/quiz/score')
-def quiz_score():
-    """
-    Show final quiz results
-    """
-
-    total = len(quiz_items)
-    description = str(SCORE) + "/" + str(total) + "\n"
-
-    if SCORE > (2*total)//3:
-        title = "Yaaas, queen!"
-        description = description + """You're slaying it with an amazing score,
-        showing off your fierce knowledge and style!"""
-
-    elif SCORE > total//3:
-        title = "Looking good, hun!"
-        description = description +  """Your score is on point,showing
-        you've got the basics down, but there's always room to accessorize and level up."""
-
-    else:
-        title = "Go piss, girl..."
-        description = description +  """Let's glam up that score by giving
-        those learn tabs another twirl, it's all about the journey, right?"""
-
-    return module_subheader(data = {
-            "title": title,
-            "description": description,
-            "left_img": 
-                "https://cdn.vectorstock.com/i/500p/20/11/color-whell-to-white-vector-2992011.jpg",
-            "right_img": 
-                "https://cdn.vectorstock.com/i/500p/20/11/color-whell-to-white-vector-2992011.jpg",
-        })
-
 # DATA
 
 LESSON = ("undertone", 0)
@@ -331,15 +335,34 @@ quiz_items = [
             "image2": "https://i.pinimg.com/564x/d0/9f/2b/d09f2bafd306de9d50eef5491ca1ad8a.jpg",
             "answer": 1,
     }),
-    (four_options, {
+    (this_or_that, {
             "id": 3,
+            "question": "Which pallete looks more harmonious with her warm skintone?",
+            "option1": "",
+            "option2": "",
+            "image1": "https://i.pinimg.com/736x/45/88/9f/45889f34807714b53baae0eda6f01681.jpg",
+            "image2": "https://kiskastudios.com/cdn/shop/files/032-B1.jpg?v=1704928843&width=1344",
+            "answer": 2,
+    }),
+    (four_options, {
+            "id": 4,
             "pre": "Which outfit's colors are",
             "question": "muted and low contrast?",
             "image1": "https://i.pinimg.com/originals/33/c8/03/33c8034beecb68833bde88b26f5c3385.jpg",
             "image2": "https://i.pinimg.com/originals/01/a4/5a/01a45a4f7899c7493b9bc5c1382c0dd2.jpg",
             "image3": "https://i.pinimg.com/originals/34/77/03/34770356b8d4c6dca8afb3128073fbe5.jpg",
-            "image4": "https://i.pinimg.com/originals/3c/4e/5c/3c4e5c5cf71c6d393b32972d0109de37.jpg",
+            "image4": "https://i.pinimg.com/736x/15/6b/ed/156bed7a6dcde391a83d202de3590684.jpg",
             "answer": 3,
+    }),
+    (four_options, {
+            "id": 5,
+            "pre": "Which outfit has the",
+            "question": "highest contrast between colors?",
+            "image1": "https://img-va.myshopline.com/image/store/1694484096840/MichelleBluePrintedMaxiDress-2_1512x.jpg?w=1500&h=2250",
+            "image2": "https://img.staticdj.com/573d245dc748b236b7f37fba9d65a46b.jpeg",
+            "image3": "https://i.pinimg.com/736x/7a/54/12/7a5412dd35bf436f0ecc096d0e4c7ae7.jpg",
+            "image4": "https://i.pinimg.com/736x/d6/05/6c/d6056c3c14b8e4fa9bf0d3f70f8ee9fa.jpg",
+            "answer": 2,
     }),
 ]
 

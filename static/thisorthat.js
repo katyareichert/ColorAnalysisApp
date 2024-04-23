@@ -30,7 +30,7 @@ function updateScore(correct) {
             console.log(response.next_question_url);
             setTimeout(function() {
                 window.location.href = response.next_question_url;
-            }, 1500);
+            }, 1200);
         },
         error: function(xhr, status, error) {
             console.error('Error updating score:', error);

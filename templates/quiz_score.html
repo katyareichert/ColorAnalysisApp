@@ -9,14 +9,16 @@
         </div>
 
 
-        <div class="col-6">
+        <div class="col-6 center">
             <div class="spacer"></div>
-
-            <div class="center bottom-padding bottom-margin">
-                <h1>{{data.title}}</h1>
+            
+            <h1 class="bottom-padding bottom-margin">{{data.score}}</h1>
+            <div class="bottom-padding">
+                <h2 class="purple">{{data.title}}</h2>
             </div>
-        
-            <p class="center side-padding">{{data.description}}</p>
+            <p class="side-padding">{{data.description}}</p>
+
+            <div class="spacer"></div>
         
             <div class="center">
                 <button class="btn btn-outline-success" id="next" type="submit">Continue</button>
@@ -28,8 +30,4 @@
         </div>
     </div>
     
-{% endblock %}
-
-{% block scripts %}
-    <script src="{{url_for('static', filename='next_lesson.js')}}"></script>
 {% endblock %}
