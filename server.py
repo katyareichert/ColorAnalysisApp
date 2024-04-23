@@ -172,20 +172,22 @@ def update_score():
     """
     Update the quiz score
     """
-    global SCORE
-    SCORE += 1
 
-    return jsonify(score=SCORE)
+    data = request.get_json()
+    question_id = data["question_id"]
+    correct = data["correct"]
 
-    # question_id = request.get_json()
-    # print(question_id)
-    # next_question_id = question_id + 1
-    # next_question_url = "quiz/" + next_question_id
+    if correct:
+        global SCORE
+        SCORE += 1
 
-    # if next_question_id >= len(quiz_items):
-    #     return jsonify(score=SCORE, next_question_url="quiz/score")
+    next_question_id = question_id + 1
+    next_question_url = "/quiz/" + str(next_question_id)
 
-    # return jsonify(score=SCORE, next_question_url = next_question_url)
+    if next_question_id >= len(quiz_items):
+        return jsonify(score=SCORE, next_question_url="/quiz/score")
+
+    return jsonify(score=SCORE, next_question_url = next_question_url)
 
 # DATA
 
@@ -270,7 +272,15 @@ quiz_items = [
             "image2": "https://www.annalauren.ca/cdn/shop/files/S605c19a39a1a4d6ab0880c2f3add2b84Z.webp?v=1706915934&width=1206",
             "answer": 2,
     }),
-    ()
+    (this_or_that, {
+            "id": 1,
+            "question": "Which outfit highlights cool tones?",
+            "option1": "",
+            "option2": "",
+            "image1": "https://i.pinimg.com/originals/cf/ae/3e/cfae3e6037f8803296d98d7c1dd7aee6.jpg",
+            "image2": "https://i.pinimg.com/originals/ed/66/25/ed6625921c8f3c4938a1006e2bf3be87.jpg",
+            "answer": 1,
+    })
 ]
 
 if __name__ == '__main__':

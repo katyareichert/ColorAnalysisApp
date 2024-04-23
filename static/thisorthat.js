@@ -12,14 +12,25 @@ function getScore() {
     });
 }
 
-function updateScore() {
+function updateScore(correct) {
+
+    data = {
+        "question_id": question_id,
+        "correct": correct
+    }
+
     $.ajax({
         url: '/update_score',
         type: 'POST',
-        data: { current_id: true },
+        contentType: 'application/json; charset=utf-8',
+        dataType: 'json',
+        data: JSON.stringify(data),
         success: function(response) {
             $('#score').text(response.score);
-            // window.location.href = response.next_question_url;
+            console.log(response.next_question_url);
+            setTimeout(function() {
+                window.location.href = response.next_question_url;
+            }, 1500);
         },
         error: function(xhr, status, error) {
             console.error('Error updating score:', error);
@@ -33,38 +44,44 @@ $(document).ready(function() {
 
     // Option 1
     $("#option1").click(function() {
-        if (1 === ans) {
-            updateScore();
-            $("#option1").animate({
+        let correct = 1 === ans;
+        if (correct) {
+            $(this).animate({
                 borderWidth: "10px",
                 borderColor: "green"
             }, 500);
-            $("#option1").css("border", "10px solid green");
+            $(this).css("border", "10px solid green");
             
         } else {
-            $("#option1").animate({
+            $(this).animate({
                 borderWidth: "10px",
                 borderColor: "red"
             }, 500);
-            $("#option1").css("border", "10px solid red");
+            $(this).css("border", "10px solid red");
         }
+
+        updateScore(correct);
+
     });
 
     // Option 2
     $("#option2").click(function() {
-        if (2 === ans) {
-            updateScore();
+        let correct = 2 === ans;
+        if (correct) {
             $(this).animate({
                 borderWidth: "10px",
                 borderColor: "green"
             }, 500);
-            $("#option2").css("border", "10px solid green");
+            $(this).css("border", "10px solid green");
+            
         } else {
             $(this).animate({
                 borderWidth: "10px",
                 borderColor: "red"
             }, 500);
-            $("#option2").css("border", "10px solid red");
+            $(this).css("border", "10px solid red");
         }
+
+        updateScore(correct);
     });
 });

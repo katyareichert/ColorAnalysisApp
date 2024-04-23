@@ -32,6 +32,6 @@
     <script src="{{url_for('static', filename='thisorthat.js')}}"></script>
     <script>
         var ans = {{data.answer|tojson}};
-        var question_id = {{data.id|tojson}};
+        var question_id = {{data.id|tojson}}; 
     </script>
 {% endblock %}
