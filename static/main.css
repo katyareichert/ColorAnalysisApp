@@ -1,18 +1,18 @@
 :root {
-    --dark-gray: rgb(64,64,64);
-    --yellow: rgb(184, 156, 48);
+    --dark-gray: #9692d4;
+    --yellow: #FFC1CC;
     --green: rgb(63, 86, 42);
-    --off-white: rgb(208, 206, 206);
+    --off-white: rgb(228, 226, 226);
 }
 
 body {
     margin: 0;
-    font-family: "Barlow", sans-serif;
+    font-family: "Sora", sans-serif;
     color: var(--dark-gray);
 }
 
 h1, h2, h3, h4 {
-    font-family: "Jost", sans-serif;
+    font-family: "Unbounded", sans-serif;
     color: rgb(32, 32, 32);
 }
 
@@ -65,6 +65,7 @@ a:hover {
 
 nav a {
     color: var(--off-white);
+    font-size: 14px;
 }
 nav a:hover {
     color: var(--yellow);

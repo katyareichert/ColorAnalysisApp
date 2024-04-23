@@ -44,7 +44,11 @@ def quiz(question):
     Returns: render template
     """
 
-    return render_template(quiz_items[question][0], data = quiz_items[question][1])
+    try:
+        render_page, data = quiz_items[int(question)]
+        return render_page(data)
+    except ValueError:
+        return "Error 404: Page does not exist"
 
 # HIDDEN HELPER ROUTES ------------------------------------
 
@@ -145,7 +149,6 @@ def tot():
             "image1": "https://i.pinimg.com/564x/77/86/64/778664aa9712debc60f21f4e860a27ef.jpg",
             "image2": "https://www.annalauren.ca/cdn/shop/files/S605c19a39a1a4d6ab0880c2f3add2b84Z.webp?v=1706915934&width=1206",
             "answer": 2,
-            "score": 2,
         })
 def this_or_that(data):
     """
@@ -160,7 +163,9 @@ def get_score():
     """
     Return the current quiz score
     """
-    return jsonify(score=SCORE)
+    total = len(quiz_items)
+    print(SCORE, total)
+    return jsonify(score=SCORE, total=total)
 
 @app.route('/update_score', methods=['POST'])
 def update_score():
@@ -172,10 +177,20 @@ def update_score():
 
     return jsonify(score=SCORE)
 
+    # question_id = request.get_json()
+    # print(question_id)
+    # next_question_id = question_id + 1
+    # next_question_url = "quiz/" + next_question_id
+
+    # if next_question_id >= len(quiz_items):
+    #     return jsonify(score=SCORE, next_question_url="quiz/score")
+
+    # return jsonify(score=SCORE, next_question_url = next_question_url)
+
 # DATA
 
 LESSON = ("undertone", 0)
-SCORE = 3
+SCORE = 0
 
 lesson_items = {
     "undertone": [
@@ -246,10 +261,16 @@ lesson_items = {
 }
 
 quiz_items = [
-    ("thisorthat.html", {
-        "question": "",
-        "media": []
-    })
+    (this_or_that, {
+            "id": 0,
+            "question": "Which outfit has high chroma?",
+            "option1": "",
+            "option2": "",
+            "image1": "https://i.pinimg.com/564x/77/86/64/778664aa9712debc60f21f4e860a27ef.jpg",
+            "image2": "https://www.annalauren.ca/cdn/shop/files/S605c19a39a1a4d6ab0880c2f3add2b84Z.webp?v=1706915934&width=1206",
+            "answer": 2,
+    }),
+    ()
 ]
 
 if __name__ == '__main__':

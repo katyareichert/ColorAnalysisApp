@@ -19,7 +19,11 @@
     </div>
 
     <div class="center">
-        <p class="light">Score: <span id="score">0</span>/10</p>
+        <p class="light">Score: 
+            <span id="score">0</span>
+            /
+            <span id="total">10</span>
+        </p>
     </div>
     
 {% endblock %}
@@ -28,5 +32,6 @@
     <script src="{{url_for('static', filename='thisorthat.js')}}"></script>
     <script>
         var ans = {{data.answer|tojson}};
+        var question_id = {{data.id|tojson}};
     </script>
 {% endblock %}

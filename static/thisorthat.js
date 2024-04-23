@@ -4,6 +4,7 @@ function getScore() {
         type: 'GET',
         success: function(response) {
             $('#score').text(response.score);
+            $('#total').text(response.total);
         },
         error: function(xhr, status, error) {
             console.error('Error fetching score:', error);
@@ -15,9 +16,10 @@ function updateScore() {
     $.ajax({
         url: '/update_score',
         type: 'POST',
-        data: { correct_answer: true },
+        data: { current_id: true },
         success: function(response) {
             $('#score').text(response.score);
+            // window.location.href = response.next_question_url;
         },
         error: function(xhr, status, error) {
             console.error('Error updating score:', error);
