@@ -20,6 +20,14 @@ h4 {
     margin-top: 2px;
 }
 
+img {
+    border-radius: 20px;
+}
+
+.container {
+    padding-bottom: 20px;
+}
+
 nav {
     background-color: var(--dark-gray);
     display: flex;
@@ -189,4 +197,16 @@ button {
 
 .push_right {
     margin-left: 15px;
+}
+
+.tot {
+    height: 360px;
+    width: 270px;
+    object-fit: cover;
+}
+
+.tot:hover {
+    border: 2px solid var(--yellow);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
 }

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% extends "layout.html" %}
+
+{% block content %}
+    <div class="center bottom-padding bottom-margin">
+        <h1>{{data.question}}</h1>
+    </div>
+
+    <div class="row bottom-margin">
+        <div class="col-2"></div>
+        <div class="col-4 center">
+            <img class="tot" src={{data.image1}} id="option1">
+            <h3>{{data.option1}}</h3>
+        </div>
+        <div class="col-4 center">
+            <img class="tot" src={{data.image2}} id="option2">
+            <h3>{{data.option2}}</h3>
+        </div>
+    </div>
+
+    <div class="center">
+        <p class="light">Score: <span id="score">0</span>/10</p>
+    </div>
+    
+{% endblock %}
+
+{% block scripts %}
+    <script src="{{url_for('static', filename='thisorthat.js')}}"></script>
+    <script>
+        var ans = {{data.answer|tojson}};
+    </script>
+{% endblock %}

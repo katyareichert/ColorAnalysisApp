@@ -133,7 +133,32 @@ def color_columns(data):
     """
     return render_template('color_columns.html', data=data)
 
+@app.route('/tot')
+def tot():
+    """
+    TEST
+    """
+    return this_or_that(data = {
+            "question": "Which outfit has high chroma?",
+            "option1": "",
+            "option2": "",
+            "image1": "https://i.pinimg.com/564x/77/86/64/778664aa9712debc60f21f4e860a27ef.jpg",
+            "image2": "https://www.annalauren.ca/cdn/shop/files/S605c19a39a1a4d6ab0880c2f3add2b84Z.webp?v=1706915934&width=1206",
+            "answer": 2,
+            "score": 2,
+        })
+def this_or_that(data):
+    """
+    This or that question test page
+
+    Returns: render template
+    """
+    return render_template('thisorthat.html', data=data)
+
 # DATA
+
+LESSON = ("undertone", 0)
+SCORE = 0
 
 lesson_items = {
     "undertone": [
