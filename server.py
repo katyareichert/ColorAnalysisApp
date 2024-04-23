@@ -280,7 +280,16 @@ quiz_items = [
             "image1": "https://i.pinimg.com/originals/cf/ae/3e/cfae3e6037f8803296d98d7c1dd7aee6.jpg",
             "image2": "https://i.pinimg.com/originals/ed/66/25/ed6625921c8f3c4938a1006e2bf3be87.jpg",
             "answer": 1,
-    })
+    }),
+    (this_or_that, {
+            "id": 2,
+            "question": "Whos features can handle more contrast?",
+            "option1": "",
+            "option2": "",
+            "image1": "https://i.pinimg.com/originals/a2/3f/a1/a23fa1bcb86837a3de07c4a6bad7ad06.jpg",
+            "image2": "https://i.pinimg.com/564x/d0/9f/2b/d09f2bafd306de9d50eef5491ca1ad8a.jpg",
+            "answer": 1,
+    }),
 ]
 
 if __name__ == '__main__':
