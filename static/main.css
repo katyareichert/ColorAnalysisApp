@@ -207,6 +207,10 @@ button {
     height: 100px;
 }
 
+.big-spacer {
+    height: 250px;
+}
+
 .push_right {
     margin-left: 15px;
 }
@@ -242,4 +246,32 @@ button {
     height: 250px;
     margin-top: 30px;
     margin-bottom: 60px;
+}
+
+.blob {
+    margin-top: -80px;
+    margin-left: -170px;
+    margin-bottom: -30px;
+    width: 130%;
+    height: 640px;
+    background-color: aqua;
+    background-image: url("img/blob.png");
+    background-size: cover;
+}
+
+.black-button {
+    border-color: black;
+    color: black;
+    padding: 10px 40px;
+}
+
+.black-button:hover {
+    border-color: var(--yellow);
+    color: var(--yellow);
+    background-color: var(--off-white);
+    padding: 10px 40px;
+}
+
+.white-text {
+    color: white;
 }
