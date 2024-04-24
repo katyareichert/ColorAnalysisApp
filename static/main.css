@@ -93,17 +93,18 @@ button {
     color: var(--lilac);
     font-size: small;
     height: 34px;
+    border-color: var(--dark-gray);
 }
 
 #search_button {
     font-size: smaller;
-    background-color: var(--yellow);
+    background-color: var(--lilac);
     color: var(--off-white);
-    border: 1px solid var(--yellow);
+    border: 1px solid var(--dark-gray);
 }
 
 #search_button:hover { 
-    background-color: var(--off-white);
+    background-color: var(--yellow);
     color: var(--lilac);
     border: 1px solid var(--yellow);
 }

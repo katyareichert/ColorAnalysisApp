@@ -344,8 +344,8 @@ quiz_items = [
     }),
     (this_or_that, {
             "id": 3,
-            "pre": "Which pallete looks more",
-            "question": "harmonious with her warm skintone?",
+            "pre": "Which dress colors look most",
+            "question": "harmonious with her warm skin tone?",
             "option1": "",
             "option2": "",
             "image1": "https://i.pinimg.com/736x/45/88/9f/45889f34807714b53baae0eda6f01681.jpg",
