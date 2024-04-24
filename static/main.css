@@ -23,6 +23,7 @@ h4 {
 
 img {
     border-radius: 20px;
+    object-fit: cover;
 }
 
 .container {
@@ -233,4 +234,11 @@ button {
 .question-title {
     padding-left: 120px;
     padding-right: 120px;
+}
+
+.banner {
+    width: 80vw;
+    height: 250px;
+    margin-top: 30px;
+    margin-bottom: 60px;
 }
