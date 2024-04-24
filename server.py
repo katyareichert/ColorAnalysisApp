@@ -44,6 +44,10 @@ def quiz(question):
     Returns: render template
     """
 
+    if question == 0:
+        global SCORE
+        SCORE = 0
+
     try:
         render_page, data = quiz_items[int(question)]
         return render_page(data)
@@ -310,6 +314,7 @@ lesson_items = {
 quiz_items = [
     (this_or_that, {
             "id": 0,
+            "pre": "",
             "question": "Which outfit has high chroma?",
             "option1": "",
             "option2": "",
@@ -319,6 +324,7 @@ quiz_items = [
     }),
     (this_or_that, {
             "id": 1,
+            "pre": "",
             "question": "Which outfit highlights cool tones?",
             "option1": "",
             "option2": "",
@@ -328,6 +334,7 @@ quiz_items = [
     }),
     (this_or_that, {
             "id": 2,
+            "pre": "",
             "question": "Whos features can handle more contrast?",
             "option1": "",
             "option2": "",
@@ -337,7 +344,8 @@ quiz_items = [
     }),
     (this_or_that, {
             "id": 3,
-            "question": "Which pallete looks more harmonious with her warm skintone?",
+            "pre": "Which pallete looks more",
+            "question": "harmonious with her warm skintone?",
             "option1": "",
             "option2": "",
             "image1": "https://i.pinimg.com/736x/45/88/9f/45889f34807714b53baae0eda6f01681.jpg",
@@ -346,6 +354,26 @@ quiz_items = [
     }),
     (four_options, {
             "id": 4,
+            "pre": "Which outfit has the",
+            "question": "highest contrast between colors?",
+            "image1": "https://img-va.myshopline.com/image/store/1694484096840/MichelleBluePrintedMaxiDress-2_1512x.jpg?w=1500&h=2250",
+            "image2": "https://img.staticdj.com/573d245dc748b236b7f37fba9d65a46b.jpeg",
+            "image3": "https://i.pinimg.com/736x/7a/54/12/7a5412dd35bf436f0ecc096d0e4c7ae7.jpg",
+            "image4": "https://i.pinimg.com/736x/d6/05/6c/d6056c3c14b8e4fa9bf0d3f70f8ee9fa.jpg",
+            "answer": 2,
+    }),
+    (four_options, {
+            "id": 5,
+            "pre": "Which outfit has the",
+            "question": "the warmest undertone?",
+            "image1": "https://i.pinimg.com/564x/b1/8e/1c/b18e1c09290d54be91130ee23538cb65.jpg",
+            "image2": "https://i.pinimg.com/736x/ca/d0/9a/cad09aab91c6ca45393c61750d8d1433.jpg",
+            "image3": "https://i.pinimg.com/564x/58/60/d2/5860d24df0161560c70b55ecb0ecde4f.jpg",
+            "image4": "https://i.pinimg.com/564x/61/7d/2a/617d2a349b5c025a3db3ae5cf851be71.jpg",
+            "answer": 4,
+    }),
+    (four_options, {
+            "id": 6,
             "pre": "Which outfit's colors are",
             "question": "muted and low contrast?",
             "image1": "https://i.pinimg.com/originals/33/c8/03/33c8034beecb68833bde88b26f5c3385.jpg",
@@ -355,13 +383,33 @@ quiz_items = [
             "answer": 3,
     }),
     (four_options, {
-            "id": 5,
-            "pre": "Which outfit has the",
-            "question": "highest contrast between colors?",
-            "image1": "https://img-va.myshopline.com/image/store/1694484096840/MichelleBluePrintedMaxiDress-2_1512x.jpg?w=1500&h=2250",
-            "image2": "https://img.staticdj.com/573d245dc748b236b7f37fba9d65a46b.jpeg",
-            "image3": "https://i.pinimg.com/736x/7a/54/12/7a5412dd35bf436f0ecc096d0e4c7ae7.jpg",
-            "image4": "https://i.pinimg.com/736x/d6/05/6c/d6056c3c14b8e4fa9bf0d3f70f8ee9fa.jpg",
+            "id": 7,
+            "pre": "Which color blocking features a",
+            "question": "50/50 mix of warm and cool?",
+            "image1": "https://i.pinimg.com/736x/f4/2a/dc/f42adc7814d7aa25d6fd3d3eb8836e30.jpg",
+            "image2": "https://i.pinimg.com/736x/e2/e9/ea/e2e9ea3794e35e0d036876dd6d1b99c8.jpg",
+            "image3": "https://i.pinimg.com/736x/61/b7/26/61b726e03edd6f00f41a6eaa896035c5.jpg",
+            "image4": "https://i.pinimg.com/736x/93/4f/a6/934fa610a3911ee217165652121fd03c.jpg",
+            "answer": 3,
+    }),
+    (four_options, {
+            "id": 8,
+            "pre": "Which outfit's undertone, contrast, and chroma",
+            "question": "suits her features best?",
+            "image1": "/static/img/shein0.png",
+            "image2": "/static/img/shein1.png",
+            "image3": "/static/img/shein2.png",
+            "image4": "/static/img/shein3.png",
+            "answer": 4,
+    }),
+    (four_options, {
+            "id": 9,
+            "pre": "Which outfit lets you see her",
+            "question": "face before the dress?",
+            "image1": "/static/img/dress0.png",
+            "image2": "/static/img/dress1.png",
+            "image3": "/static/img/dress2.png",
+            "image4": "/static/img/dress3.png",
             "answer": 2,
     }),
 ]
