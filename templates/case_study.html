@@ -3,24 +3,27 @@
 
 {% block content %}
     <div class="row bottom-margin">
-        <div class="col-6">
-            <img class="tot" src={{data.image}} id="option1">
-            {% for color in data.colors %}
-                <div class="color_block push_right" style="background-color: #{{color}};"></div>          
-            {% endfor %}
+        <div class="col-5">
+            <img class="case_image" src={{data.image}} id="option1">
+            <div class="case_colors">
+                {% for color in data.colors %}
+                    <div class="swatch" style="background-color: #{{color}};"></div>          
+                {% endfor %}
+            </div>
         </div>
         <div class="col-6 padding">
+            <div class="bottom-margin"></div>
             <div class="col-12 padding">
-                <h3>{{data.title}}</h3>
+                <h2>{{data.title}}</h2>
             </div>
             <div class="col-10">
                 {{data.caption | safe}}
+
+                <div class="slider"></div>
+
+                <button class="btn btn-outline-success" id="next" type="submit">Continue</button>
             </div>
         </div>
-    </div>
-
-    <div class="center">
-        <button class="btn btn-outline-success" id="next" type="submit">Continue</button>
     </div>
     
 {% endblock %}
