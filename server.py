@@ -199,6 +199,29 @@ def this_or_that(data):
     """
     return render_template('thisorthat.html', data=data)
 
+@app.route('/cs')
+def cs():
+    """
+    TEST
+    """
+    return case_study(data = {
+            "title": "Chroma Study",
+            "caption": """
+                <p>Conversely, Reese Witherspoon feels overwhelmed by the intensity of the colors here. </p>
+                <p>The bright shades make her face seem tired, pulling our attention away from her features.</p>
+                """,
+            "image": "/static/img/kendall_high.png",
+            "colors": ["ff89a5ff", "b0a7feff", "5294d0ff", "72eabcff", "6fc0ffff"],
+            "slide": 0,
+        })
+def case_study(data):
+    """
+    This or that question test page
+
+    Returns: render template
+    """
+    return render_template('case_study.html', data=data)
+
 def four_options(data):
     """
     This or that question test page

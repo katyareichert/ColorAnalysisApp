@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% extends "layout.html" %}
+
+{% block content %}
+    <div class="row bottom-margin">
+        <div class="col-6">
+            <img class="tot" src={{data.image}} id="option1">
+            {% for color in data.colors %}
+                <div class="color_block push_right" style="background-color: #{{color}};"></div>          
+            {% endfor %}
+        </div>
+        <div class="col-6 padding">
+            <div class="col-12 padding">
+                <h3>{{data.title}}</h3>
+            </div>
+            <div class="col-10">
+                {{data.caption | safe}}
+            </div>
+        </div>
+    </div>
+
+    <div class="center">
+        <button class="btn btn-outline-success" id="next" type="submit">Continue</button>
+    </div>
+    
+{% endblock %}
+
+{% block scripts %}
+    <script src="{{url_for('static', filename='next_lesson.js')}}"></script>
+{% endblock %}
