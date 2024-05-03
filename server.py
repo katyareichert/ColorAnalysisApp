@@ -4,7 +4,7 @@
 # import re
 # from random import randrange
 from flask import Flask
-from flask import render_template#, redirect
+from flask import render_template, redirect, url_for
 from flask import jsonify, request
 
 app = Flask(__name__)
@@ -19,6 +19,13 @@ def welcome():
     Returns: render template
     """
     return render_template('index.html')
+
+@app.route('/learn')
+def learn_root():
+    """
+    Returns: redirect to first lesson
+    """
+    return redirect(url_for('learn', module='undertone', lesson='0'))
 
 @app.route('/learn/<module>/<lesson>')
 def learn(module, lesson):
@@ -35,6 +42,13 @@ def learn(module, lesson):
         return render_page(data)
     except ValueError:
         return "Error 404: Page does not exist"
+
+@app.route('/quiz')
+def quiz_root():
+    """
+    Returns: redirect to first lesson
+    """
+    return redirect(url_for('quiz', question='0'))
 
 @app.route('/quiz/<question>')
 def quiz(question):
@@ -662,7 +676,7 @@ quiz_items = [
             "option1": "",
             "option2": "",
             "image1": "https://i.pinimg.com/originals/a2/3f/a1/a23fa1bcb86837a3de07c4a6bad7ad06.jpg",
-            "image2": "https://i.pinimg.com/564x/d0/9f/2b/d09f2bafd306de9d50eef5491ca1ad8a.jpg",
+            "image2": "https://i.pinimg.com/736x/fb/cf/56/fbcf5662a34ba18ca07b0154987ddae2.jpg",
             "answer": 1,
     }),
     (this_or_that, {
@@ -680,7 +694,7 @@ quiz_items = [
             "pre": "Which outfit has the",
             "question": "highest contrast between colors?",
             "image1": "https://img-va.myshopline.com/image/store/1694484096840/MichelleBluePrintedMaxiDress-2_1512x.jpg?w=1500&h=2250",
-            "image2": "https://img.staticdj.com/573d245dc748b236b7f37fba9d65a46b.jpeg",
+            "image2": "https://i.pinimg.com/736x/69/22/32/69223223f009a553b08879a2bfc0e1a0.jpg",
             "image3": "https://i.pinimg.com/736x/7a/54/12/7a5412dd35bf436f0ecc096d0e4c7ae7.jpg",
             "image4": "https://i.pinimg.com/736x/d6/05/6c/d6056c3c14b8e4fa9bf0d3f70f8ee9fa.jpg",
             "answer": 2,

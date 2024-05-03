@@ -72,6 +72,11 @@
         </div>
     </div>
 
+    <script>
+      var next_lesson = '{{data.next_lesson}}';
+      var prev_lesson = '{{data.prev_lesson}}';
+    </script>
+    <script src="{{url_for('static', filename='next_lesson.js')}}"></script>
     {% block scripts %}
     {% endblock %}
 

@@ -254,7 +254,6 @@ button {
     margin-bottom: -30px;
     width: 130%;
     height: 640px;
-    background-color: aqua;
     background-image: url("img/blob.png");
     background-size: cover;
 }
