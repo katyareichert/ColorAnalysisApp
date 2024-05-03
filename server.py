@@ -528,6 +528,108 @@ lesson_items = {
             "colors": ["cdcdcdff", "aeaeaeff", "919191ff", "404040ff", "000000ff"],
             "slide": 1,
         }),
+    ],
+    "chroma": [
+        (module_subheader, {
+            "title": "Chroma",
+            "prev_lesson": "/",
+            "lesson_id": "chroma/0",
+            "next_lesson": "/learn/chroma/1",
+            "description": """The intensity or purity of a color, defining its vividness
+                or saturation within the spectrum of hues.""",
+            "left_img": "/static/img/saturation_wheel.png",
+            "right_img": "/static/img/saturation_wheel.png"
+        }),
+        (reorder, {
+            "title": "Chroma",
+            "prev_lesson": "/learn/chroma/0",
+            "lesson_id": "chroma/1",
+            "next_lesson": "/learn/chroma/2",
+            "class1": "MUTED",
+            "class2": "SATURATED",
+            "colors": ["989698ff", "937e96ff", "8f6191ff", "8e4d91ff", "8a378eff", "8b2c8eff"]
+        }),
+        (drag_and_drop, {
+            "title": "Chroma",
+            "prev_lesson": "/learn/chroma/1",
+            "lesson_id": "chroma/2",
+            "next_lesson": "/learn/chroma/3",
+            "class1": "MUTED",
+            "class2": "SATURATED",
+            "colors1": ["93c47dff", "debb98ff", "937e96ff"],
+            "colors2": ["5db736ff", "ffab40ff", "8a378eff"],
+        }),
+        (color_columns, {
+            "title": "Chroma",
+            "prev_lesson": "/learn/chroma/2",
+            "lesson_id": "chroma/3",
+            "next_lesson": "/learn/chroma/4",
+            "class1": "MUTED",
+            "class2": "SATURATED",
+            "colors1": ["93c47dff", "debb98ff", "937e96ff"],
+            "colors2": ["5db736ff", "ffab40ff", "8a378eff"],
+            "description1": """Muted colors possess a subtle and understated quality,
+                with subdued tones that evoke a sense of sophistication and refinement.""",
+            "description2": """Saturated colors are vibrant and intense, exuding energy
+                and making a bold statement with their vivid hues that demand attention.""",
+            "long1": "",
+            "long2": ""
+        }),
+        (case_study, {
+            "title": "Muted Colors in Conflict",
+            "prev_lesson": "/learn/chroma/3",
+            "lesson_id": "chroma/4",
+            "next_lesson": "/learn/chroma/5",
+            "caption": """
+                <p>Issa Rae looks stunning, but these muted colors are holding her back.</p>
+                <p>Her skin and eyes look a little dull, fighting against her naturally bright complexion. </p>
+                """,
+            "image": "/static/img/issa_low.png",
+            "colors": ["884d5eff", "9d466eff", "749abcff", "3f6a6fff", "414765ff"],
+            "slide": 0,
+        }),
+        (case_study, {
+            "title": "Saturated Colors in Harmony",
+            "prev_lesson": "/learn/chroma/4",
+            "lesson_id": "chroma/5",
+            "next_lesson": "/learn/chroma/6",
+            "caption": """
+                <p>She’s glowing!</p>
+                <p>These saturated colors bring so much life back into Issa's face. Vibrant colors
+                infuse her look with energy and charisma, perfectly mirroring her dynamic and vibrant
+                personality.</p>
+                """,
+            "image": "/static/img/issa_high.png",
+            "colors": ["d884afff", "b35894ff", "2274afff", "175259ff", "012f53ff"],
+            "slide": 1,
+        }),
+        (case_study, {
+            "title": "Saturated Colors in Conflict",
+            "prev_lesson": "/learn/chroma/5",
+            "lesson_id": "chroma/6",
+            "next_lesson": "/learn/chroma/7",
+            "caption": """
+                <p>Conversely, Reese Witherspoon feels overwhelmed by the intensity of the colors here.</p>
+                <p>The bright shades make her face seem tired, pulling our attention away from her features.</p>
+                """,
+            "image": "/static/img/reese_high.png",
+            "colors": ["ff89a5ff", "b0a7feff", "5295d0ff", "72eabcff", "6fc0ffff"],
+            "slide": 0,
+        }),
+        (case_study, {
+            "title": "Muted Colors in Harmony",
+            "prev_lesson": "/learn/chroma/6",
+            "lesson_id": "chroma/7",
+            "next_lesson": "/quiz",
+            "caption": """
+                <p>Here she can breathe!</p>
+                <p>Despite having a lower chroma, her cheeks seem rosier and more youthful.
+                A more subdued background makes her smile and soft blue eyes the star of the show.</p>
+                """,
+            "image": "/static/img/reese_low.png",
+            "colors": ["ffbdcdff", "bdbcffff", "659bcbff", "95e8beff", "8cc1ebff"],
+            "slide": 1,
+        }),
     ]
 }
 
