@@ -412,7 +412,122 @@ lesson_items = {
             "class1": "LIGHT",
             "class2": "DARK",
             "colors": ["b7b7b7ff", "666666ff", "1e1e1eff", "f3f3f3ff", "434343ff", "d9d9d9ff"]
-        })
+        }),
+        (case_study, {
+            "title": "High Contrast in Harmony",
+            "prev_lesson": "/learn/value/1",
+            "lesson_id": "value/2",
+            "next_lesson": "/learn/value/3",
+            "caption": """
+                <p>Kendall Jenner's dark hair, piercing brown eyes, and fair skin create a
+                striking high-contrast, accentuating her features with a bold allure. </p>
+                <p>This adds depth and intensity to her overall appearance, contributing to
+                her iconic and unforgettable presence.</p>
+                """,
+            "image": "/static/img/kendall_high.png",
+            "colors": ["dbb89dff", "bf8163ff", "aa5844ff", "b71302ff", "050604ff"],
+            "slide": 0,
+        }),
+        (case_study, {
+            "title": "High Contrast in Harmony",
+            "prev_lesson": "/learn/value/2",
+            "lesson_id": "value/3",
+            "next_lesson": "/learn/value/4",
+            "caption": """
+                <p>Look at the range of values picked from the photo. </p>
+                <p>Kendall's lightest and darkest values are very distant in tone, creating
+                a high contrast palette. This complements her sharp, intense features.</p>
+                """,
+            "image": "/static/img/kendall_high_bw.png",
+            "colors": ["c5c5c5ff", "aeaeaeff", "878787ff", "515151ff", "000000ff"],
+            "slide": 1,
+        }),
+        (case_study, {
+            "title": "Low Contrast in Conflict",
+            "prev_lesson": "/learn/value/3",
+            "lesson_id": "value/4",
+            "next_lesson": "/learn/value/5",
+            "caption": """
+                <p>The reduced contrast between her hair and skin tone softened her overall appearance,
+                diminishing the dramatic impact of her features. </p>
+                <p>This change shifted the balance, altering the harmony of her natural aesthetic.</p>
+                """,
+            "image": "/static/img/kendall_low.png",
+            "colors": ["dbb89dff", "bf7f63ff", "b8a786ff", "a37f4dff", "6c4436ff"],
+            "slide": 0,
+        }),
+        (case_study, {
+            "title": "Low Contrast in Conflict",
+            "prev_lesson": "/learn/value/4",
+            "lesson_id": "value/5",
+            "next_lesson": "/learn/value/6",
+            "caption": """
+                <p>See how the range of values has changed from Kendall's first photo.</p>
+                <p>Clearly, the range of values is smaller, all concentrated on the light end
+                of the value scale. This conflicts with her features, creating a dissonant look.</p>
+                """,
+            "image": "/static/img/kendall_low_bw.png",
+            "colors": ["eaeaeaff", "d7d7d7ff", "c1c1c1ff", "a6a6a6ff", "808080ff"],
+            "slide": 1,
+        }),
+        (case_study, {
+            "title": "Low Contrast in Harmony",
+            "prev_lesson": "/learn/value/5",
+            "lesson_id": "value/6",
+            "next_lesson": "/learn/value/7",
+            "caption": """
+                <p>On the other hand, Anya Taylor-Joy thrives in a low-contrast palette.</p>
+                <p>Bright tones with subtle contrast complement Anya Taylor-Joy's features flawlessly,
+                especially her striking big eyes, accentuating their captivating allure with a soft,
+                luminous glow.</p>
+                """,
+            "image": "/static/img/anya_low.jpg",
+            "colors": ["e0d7d4ff", "e3d0b8ff", "edca9cff", "c3897eff", "c01832ff"],
+            "slide": 0,
+        }),
+        (case_study, {
+            "title": "Low Contrast in Harmony",
+            "prev_lesson": "/learn/value/6",
+            "lesson_id": "value/7",
+            "next_lesson": "/learn/value/8",
+            "caption": """
+                <p>Look at how similar all these tones are.</p>
+                <p>The reduced contrast between her hair and skin tone softens her overall appearance,
+                perfectly complementing the openness of Anya's face.</p>
+                """,
+            "image": "/static/img/anya_low.png",
+            "colors": ["eaeaeaff", "d7d7d7ff", "c1c1c1ff", "a6a6a6ff", "939393ff"],
+            "slide": 1,
+        }),
+        (case_study, {
+            "title": "High Contrast in Conflict",
+            "prev_lesson": "/learn/value/7",
+            "lesson_id": "value/8",
+            "next_lesson": "/learn/value/9",
+            "caption": """
+                <p>High contrast doesn't flatter her features as it can overwhelm her delicate
+                complexion and draw attention away from her natural elegance.</p>
+                <p>She also looks less confident!</p>
+                """,
+            "image": "/static/img/anya_high.jpg",
+            "colors": ["ecc9bfff", "deaf9eff", "b21703ff", "63191bff", "272526ff"],
+            "slide": 0,
+        }),
+        (case_study, {
+            "title": "High Contrast in Conflict",
+            "prev_lesson": "/learn/value/8",
+            "lesson_id": "value/9",
+            "next_lesson": "/learn/chroma/0",
+            "caption": """
+                <p>The value range has totally changed!</p>
+                <p>Here, the extremely dark hair, makeup, and clothes look completely separate
+                from Anya's fair complexion. She looks almost eerie, far too intense for her
+                round eyes and cheekbones.</p>
+                """,
+            "image": "/static/img/anya_high.png",
+            "colors": ["cdcdcdff", "aeaeaeff", "919191ff", "404040ff", "000000ff"],
+            "slide": 1,
+        }),
     ]
 }
 
