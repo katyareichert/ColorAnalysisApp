@@ -270,6 +270,7 @@ lesson_items = {
     "undertone": [
         (module_subheader, {
             "title": "Undertone",
+            "prev_lesson": "/",
             "lesson_id": "undertone/0",
             "next_lesson": "/learn/undertone/1",
             "description": """The subtle hue or color that lies beneath the
@@ -281,6 +282,7 @@ lesson_items = {
         }),
         (drag_and_drop, {
             "title": "Undertone",
+            "prev_lesson": "/learn/undertone/0",
             "lesson_id": "undertone/1",
             "next_lesson": "/learn/undertone/2",
             "class1": "COOL",
@@ -290,8 +292,9 @@ lesson_items = {
         }),
         (color_columns, {
             "title": "Undertone",
+            "prev_lesson": "/learn/undertone/1",
             "lesson_id": "undertone/2",
-            "next_lesson": "/learn/undertone/1",
+            "next_lesson": "/learn/undertone/3",
             "class1": "COOL",
             "class2": "WARM",
             "colors1": ["bd0c42ff", "fa2f56ff", "d72942ff"],
@@ -304,32 +307,111 @@ lesson_items = {
                 with a newfound sense of clarity and wonder.""",
             "long2": """Warm colors awaken a feeling of energy and vibrancy, igniting
                 a newfound appreciation for the richness of the world."""
-        })
+        }),
+        (drag_and_drop, {
+            "title": "Undertone",
+            "prev_lesson": "/learn/undertone/2",
+            "lesson_id": "undertone/3",
+            "next_lesson": "/learn/undertone/4",
+            "class1": "COOL",
+            "class2": "WARM",
+            "colors1": ["123a75ff", "335d9bff", "6081afff"],
+            "colors2": ["06107cff", "2437e6ff", "6c77eaff"],
+        }),
+        (color_columns, {
+            "title": "Undertone",
+            "prev_lesson": "/learn/undertone/3",
+            "lesson_id": "undertone/4",
+            "next_lesson": "/learn/undertone/5",
+            "class1": "COOL",
+            "class2": "WARM",
+            "colors1": ["123a75ff", "335d9bff", "6081afff"],
+            "colors2": ["06107cff", "2437e6ff", "6c77eaff"],
+            "description1": """A cool blue leans more teal or gray, evoking a sense of
+                tranquility, akin to the hue of a calm ocean or a clear sky at twilight. 
+                """,
+            "description2": """A warm blue is more vibrant and purple, imbuing it with energy,
+                reminiscent of a tropical paradise.
+                """,
+            "long1": "",
+            "long2": ""
+        }),
+        (case_study, {
+            "title": "Warm Tones in Conflict",
+            "prev_lesson": "/learn/undertone/4",
+            "lesson_id": "undertone/5",
+            "next_lesson": "/learn/undertone/6",
+            "caption": """
+                <p>In warm colors, Rihanna's features hide, dimming her natural radiance. </p>
+                <p>This merging effect distracts from her face, making her overall appearance 
+                lackluster. The outcome is a diminished glow and a less impactful presence.</p>
+                """,
+            "image": "/static/img/rihanna_warm.jpg",
+            "colors": ["cda07eff", "dd9c84ff", "b98b31ff", "8c4313ff", "5d2005ff"],
+            "slide": 0,
+        }),
+        (case_study, {
+            "title": "Cool Tones in Harmony",
+            "prev_lesson": "/learn/undertone/5",
+            "lesson_id": "undertone/6",
+            "next_lesson": "/learn/undertone/7",
+            "caption": """
+                <p>What a difference!</p>
+                <p>Notice how your eyes go straight to her face here. She looks a lot more striking,
+                allowing her features to shine rather than being overpowered. </p>
+                """,
+            "image": "/static/img/rihanna_cool.jpg",
+            "colors": ["d7b99fff", "dd9c84ff", "807b73ff", "555454ff", "613924ff"],
+            "slide": 1,
+        }),
+        (case_study, {
+            "title": "Cool Tones in Conflict",
+            "prev_lesson": "/learn/undertone/6",
+            "lesson_id": "undertone/7",
+            "next_lesson": "/learn/undertone/8",
+            "caption": """
+                <p>Cool tones starkly contrasts Beyoncé's warm undertone, making her skin seem more
+                pale and going against her natural aura.</p>
+                <p>While the contrast in tones is striking, the silver looks disconnected from her face.</p>
+                """,
+            "image": "/static/img/beyonce_cool.png",
+            "colors": ["c0ada2ff", "e3a986ff", "b36d46ff", "58526aff", "4d2f23ff"],
+            "slide": 0,
+        }),
+        (case_study, {
+            "title": "Warm Tones in Harmony",
+            "prev_lesson": "/learn/undertone/7",
+            "lesson_id": "undertone/8",
+            "next_lesson": "/learn/value/0",
+            "caption": """
+                <p>Look at her glow!</p>
+                <p>Much more than in silver, gold brings out the warmth of Beyonce's skin and hair,
+                creating a vibrant richness to her appearance. </p>
+                """,
+            "image": "/static/img/beyonce_warm.png",
+            "colors": ["dfbc7bff", "e3a986ff", "b36d46ff", "9d6f39ff", "644b2fff"],
+            "slide": 1,
+        }),
     ],
     "value": [
         (module_subheader, {
             "title": "Value",
-            "description": """The subtle hue or color that lies beneath the
-                surface of a primary color, influencing its overall appearance.""",
-            "left_img": 
-                "https://cdn.vectorstock.com/i/500p/20/11/color-whell-to-white-vector-2992011.jpg",
-            "right_img": 
-                "https://cdn.vectorstock.com/i/500p/20/11/color-whell-to-white-vector-2992011.jpg"
+            "prev_lesson": "/",
+            "lesson_id": "value/0",
+            "next_lesson": "/learn/value/1",
+            "description": """The lightness or darkness of a color, 
+                determining its level of brightness or depth.""",
+            "left_img": "/static/img/contrast_wheel.png",
+            "right_img": "/static/img/contrast_wheel.png"
         }),
-        (color_columns, {
+        (reorder, {
             "title": "Value",
-            "class1": "COOL",
-            "class2": "WARM",
-            "colors1": ["bd0c42ff", "fa2f56ff", "d72942ff"],
-            "colors2": ["f53310ff", "ca3b1eff", "fc5f47ff"],
-            "description1": """A cool red leans more towards purple, 
-                suggesting calmness, depth, and similarity to ripe cranberries.""",
-            "description2": """A warm red has hints of orange, embodying vibrancy, 
-                energy, and resembling a fiery sunset.""",
-            "long1": """Cool colors evoke a peaceful atmosphere, inviting exploration
-                with a newfound sense of clarity and wonder.""",
-            "long2": """Warm colors awaken a feeling of energy and vibrancy, igniting
-                a newfound appreciation for the richness of the world."""
+            "prev_lesson": "/learn/value/0",
+            "lesson_id": "value/1",
+            "next_lesson": "/learn/value/2",
+            "class1": "LIGHT",
+            "class2": "DARK",
+            "colors": ["b7b7b7ff", "666666ff", "1e1e1eff", "f3f3f3ff", "434343ff", "d9d9d9ff"]
         })
     ]
 }
