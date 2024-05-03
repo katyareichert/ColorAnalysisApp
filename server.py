@@ -582,7 +582,8 @@ lesson_items = {
             "next_lesson": "/learn/chroma/5",
             "caption": """
                 <p>Issa Rae looks stunning, but these muted colors are holding her back.</p>
-                <p>Her skin and eyes look a little dull, fighting against her naturally bright complexion. </p>
+                <p>Her skin and eyes look a little dull, fighting against her naturally bright complexion.
+                These colors clash with her vibrant personality and overshadow her natural charm.</p>
                 """,
             "image": "/static/img/issa_low.png",
             "colors": ["884d5eff", "9d466eff", "749abcff", "3f6a6fff", "414765ff"],

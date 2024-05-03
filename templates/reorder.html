@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-{% extends "layout.html" %}
+{% extends "learn_layout.html" %}
 
 {% block content %}
     <div class="center bottom-padding bottom-margin">
@@ -21,14 +21,9 @@
             <div class="reorder color_block" style="background-color: #{{color}};"></div>          
         {% endfor %}
     </div>
-
-    <div class="center">
-        <button class="btn btn-outline-success" id="check" type="submit">Check</button>
-    </div>
     
 {% endblock %}
 
 {% block scripts %}
     <script src="{{url_for('static', filename='reorder.js')}}"></script>
-    <script src="{{url_for('static', filename='next_lesson.js')}}"></script>
 {% endblock %}

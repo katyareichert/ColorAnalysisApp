@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-{% extends "layout.html" %}
+{% extends "learn_layout.html" %}
 
 {% block content %}
-    <div class="row bottom-margin">
+    <div class="row bottom-margin case_stud">
         <div class="col-5">
             <img class="case_image" src={{data.image}} id="option1">
             <div class="case_colors">
@@ -20,14 +20,8 @@
                 {{data.caption | safe}}
 
                 <div class="slider"></div>
-
-                <button class="btn btn-outline-success" id="next" type="submit">Continue</button>
             </div>
         </div>
     </div>
     
-{% endblock %}
-
-{% block scripts %}
-    <script src="{{url_for('static', filename='next_lesson.js')}}"></script>
 {% endblock %}

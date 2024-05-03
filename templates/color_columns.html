@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-{% extends "layout.html" %}
+{% extends "learn_layout.html" %}
 
 {% block content %}
-    <div class="center bottom-padding bottom-margin">
+    <div class="center bottom-margin">
         <h1>{{data.title}}</h1>
     </div>
 
@@ -28,14 +28,5 @@
             <span class="right-align">{{data.description2}}</span>
         </div>
     </div>
-
-    <div class="center">
-        <button class="btn btn-outline-success" id="next" type="submit">Continue</button>
-    </div>
     
-{% endblock %}
-
-{% block scripts %}
-    <script src="{{url_for('static', filename='dragndrop.js')}}"></script>
-    <script src="{{url_for('static', filename='next_lesson.js')}}"></script>
 {% endblock %}

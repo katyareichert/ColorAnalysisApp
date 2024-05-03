@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-{% extends "layout.html" %}
+{% extends "learn_layout.html" %}
 
 {% block content %}
-    <div class="center bottom-padding bottom-margin">
+    <div class="center bottom-margin">
         <h1>{{data.title}}</h1>
     </div>
 
@@ -24,10 +24,6 @@
             <h3>{{data.class2}}</h3>
             <div class="drop-target drop-target2">drop here</div>
         </div>
-    </div>
-
-    <div class="center">
-        <button class="btn btn-outline-success" id="next" type="submit">Continue</button>
     </div>
     
 {% endblock %}

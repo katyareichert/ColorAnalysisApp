@@ -1,8 +1,7 @@
 :root {
     --dark-gray: rgb(60, 60, 60);
     --lilac: #9692d4;
-    --yellow: #FFC1CC;
-    --green: rgb(63, 86, 42);
+    --pink: #FFC1CC;
     --off-white: #fff7fd;
 }
 
@@ -60,10 +59,10 @@ nav {
 }
 
 a {
-    color: var(--green);
+    color: var(--lilac);
 }
 a:hover {
-    color: var(--yellow);
+    color: var(--pink);
 }
 
 nav a {
@@ -71,7 +70,7 @@ nav a {
     font-size: 14px;
 }
 nav a:hover {
-    color: var(--yellow);
+    color: var(--pink);
 }
 
 .nav-links li:last-child {
@@ -86,7 +85,7 @@ nav a:hover {
 }
 
 button {
-    border: 1px solid var(--yellow);
+    border: 1px solid var(--pink);
     border-radius: 5px;
 }
 
@@ -105,9 +104,9 @@ button {
 }
 
 #search_button:hover { 
-    background-color: var(--yellow);
+    background-color: var(--pink);
     color: var(--lilac);
-    border: 1px solid var(--yellow);
+    border: 1px solid var(--pink);
 }
 
 .center {
@@ -223,7 +222,7 @@ button {
 }
 
 .tot:hover {
-    border: 2px solid var(--yellow);
+    border: 2px solid var(--pink);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     cursor: pointer;
 }
@@ -267,8 +266,8 @@ button {
 }
 
 .black-button:hover {
-    border-color: var(--yellow);
-    color: var(--yellow);
+    border-color: var(--pink);
+    color: var(--pink);
     background-color: var(--off-white);
     padding: 10px 40px;
 }
@@ -304,4 +303,37 @@ button {
     width: 380px;
     height: 20px; /* Adjust height as needed */
     background: linear-gradient(to right, #eb8bafff, #9692d4ff);
+}
+
+.button_bar {
+    padding-top: 20px;
+}
+
+#back {
+    float: left;
+    border-color: var(--pink);
+    color: var(--pink);
+}
+
+#back:hover {
+    border-color: transparent;
+    background-color: var(--pink);
+    color: white;
+}
+
+#next {
+    float: right;
+    border-color: transparent;
+    background-color: var(--lilac);
+    color: white;
+}
+
+#next:hover {
+    border-color: var(--lilac);
+    background-color: transparent;
+    color: var(--lilac);
+}
+
+.case_stud {
+    height: 430px;
 }
