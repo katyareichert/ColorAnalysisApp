@@ -2,7 +2,6 @@
 # pylint: disable=global-statement
 
 # import re
-# from random import randrange
 from flask import Flask
 from flask import render_template, redirect, url_for
 from flask import jsonify, request
