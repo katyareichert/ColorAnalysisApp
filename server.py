@@ -1,14 +1,14 @@
-"""This is the backend server for World Cup Stadiums Site"""
+"""This is the backend server for my Color Analysis App"""
 # pylint: disable=global-statement
 
-# import re
+from random import random
 from flask import Flask
 from flask import render_template, redirect, url_for
 from flask import jsonify, request
 
 app = Flask(__name__)
 
-# ROUTES
+# ROUTES --------------------------------------------------
 @app.route('/')
 def welcome():
     """
@@ -165,6 +165,8 @@ def reorder(data):
 
     Returns: render template
     """
+    shuffled = [('a' + str(i), x) for i, x in enumerate(data['colors'])]
+    data['shuffled'] = sorted(shuffled, key=lambda k: random())
     return render_template('reorder.html', data=data)
 
 @app.route('/cc')
@@ -274,7 +276,7 @@ def update_score():
 
     return jsonify(score=SCORE, next_question_url = next_question_url)
 
-# DATA
+# DATA ----------------------------------------------------
 
 LESSON = ("undertone", 0)
 SCORE = 0
@@ -315,11 +317,7 @@ lesson_items = {
             "description1": """A cool red leans more towards purple, 
                 suggesting calmness, depth, and similarity to ripe cranberries.""",
             "description2": """A warm red has hints of orange, embodying vibrancy, 
-                energy, and resembling a fiery sunset.""",
-            "long1": """Cool colors evoke a peaceful atmosphere, inviting exploration
-                with a newfound sense of clarity and wonder.""",
-            "long2": """Warm colors awaken a feeling of energy and vibrancy, igniting
-                a newfound appreciation for the richness of the world."""
+                energy, and resembling a fiery sunset."""
         }),
         (drag_and_drop, {
             "title": "Undertone",
@@ -424,7 +422,9 @@ lesson_items = {
             "next_lesson": "/learn/value/2",
             "class1": "LIGHT",
             "class2": "DARK",
-            "colors": ["b7b7b7ff", "666666ff", "1e1e1eff", "f3f3f3ff", "434343ff", "d9d9d9ff"]
+            "keywords1": "Associated with airiness, spaciousness, and crispness, creating an open ambiance.",
+            "keywords2": "Associated with coziness, intimate atmospheres, and captivating intensity.",
+            "colors": ["f3f3f3ff", "d9d9d9ff", "b7b7b7ff", "666666ff", "434343ff", "1e1e1eff"]
         }),
         (case_study, {
             "title": "High Contrast in Harmony",

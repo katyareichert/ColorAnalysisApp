@@ -1,29 +1,41 @@
 <!DOCTYPE html>
-{% extends "learn_layout.html" %}
+{% extends "layout.html" %}
 
 {% block content %}
-    <div class="center bottom-padding bottom-margin">
+    <div class="center bottom-margin">
         <h1>{{data.title}}</h1>
     </div>
 
-    <div class="row bottom-padding bottom-margin">
-        <div class="col-3 center">
-            <h3>{{data.class1}}</h3>
+    <div class="row bottom-margin">
+        <div class="col-4">
+            <h3 class="center">{{data.class1}}</h3>
+            {{data.keywords1}}
         </div>
-        <div class="col-6"></div>
-        <div class="col-3 center">
-            <h3>{{data.class2}}</h3>
+        <div class="col-4"></div>
+        <div class="col-4">
+            <h3 class="center">{{data.class2}}</h3>
+            {{data.keywords2}}
         </div>
     </div>
 
-    <div class="order-container bottom-margin">
-        {% for color in data.colors %}
-            <div class="reorder color_block" style="background-color: #{{color}};"></div>          
+    <p class="center light" id="tip">drag to reorder</p>
+    <div class="order-container">
+        {% for i, color in data.shuffled %}
+            <div id="{{i}}" class="reorder color_block reorder_block" style="background-color: #{{color}};"></div>          
         {% endfor %}
+    </div>
+
+    <div class="button_bar">
+        <button id="back" type="submit">Back</button>
+        <button id="next" type="submit">Continue</button>
     </div>
     
 {% endblock %}
 
 {% block scripts %}
+    <script>
+        var next_lesson = '{{data.next_lesson}}';
+        var prev_lesson = '{{data.prev_lesson}}';
+    </script>
     <script src="{{url_for('static', filename='reorder.js')}}"></script>
 {% endblock %}

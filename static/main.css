@@ -87,6 +87,16 @@ nav a:hover {
 button {
     border: 1px solid var(--pink);
     border-radius: 5px;
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, 
+        border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    background-color: transparent;
 }
 
 #search_bar {
@@ -136,7 +146,7 @@ button {
 }
 
 .light {
-    color: gray;
+    color: lightgray;
 }
 
 .right-align {
@@ -166,7 +176,8 @@ button {
     padding: 20px;
     display: flex;
     width: max-content;
-    background-color: black;
+    background: linear-gradient(to right, #ffe4eeff, #e2e1ffff);
+    margin-bottom: 70px;
 }
 
 .reorder {
@@ -296,7 +307,7 @@ button {
     margin-top: 50px;
     margin-bottom: 70px;
     width: 380px;
-    height: 20px; /* Adjust height as needed */
+    height: 20px;
     background: linear-gradient(to right, #eb8bafff, #9692d4ff);
 }
 
@@ -341,4 +352,9 @@ button {
 
 .hide {
     display: none;
+}
+
+.reorder_block {
+    width: 168px;
+    height: 100px;
 }
