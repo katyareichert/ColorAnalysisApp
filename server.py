@@ -47,7 +47,15 @@ def quiz_root():
     """
     Returns: redirect to first lesson
     """
-    return redirect(url_for('quiz', question='0'))
+    data = {
+            "title": "Quiz",
+            "next_lesson": "/quiz/0",
+            "description": """Now that you're a true fashion girlie equipped with color theory,
+            it's time to test your knowledge!""",
+            "left_img": "/static/img/quiz_wheel.png",
+            "right_img": "/static/img/quiz_wheel.png"
+        }
+    return module_subheader(data)
 
 @app.route('/quiz/<question>')
 def quiz(question):
@@ -710,9 +718,9 @@ quiz_items = [
             "id": 5,
             "pre": "Which outfit has the",
             "question": "the warmest undertone?",
-            "image1": "https://i.pinimg.com/564x/b1/8e/1c/b18e1c09290d54be91130ee23538cb65.jpg",
+            "image1": "https://i.pinimg.com/736x/2d/ed/51/2ded51165beca073bd024db56ee81ad4.jpg",
             "image2": "https://i.pinimg.com/736x/ca/d0/9a/cad09aab91c6ca45393c61750d8d1433.jpg",
-            "image3": "https://i.pinimg.com/564x/58/60/d2/5860d24df0161560c70b55ecb0ecde4f.jpg",
+            "image3": "https://i.pinimg.com/564x/04/c0/cf/04c0cf50418ce1f8107c779cee5872e3.jpg",
             "image4": "https://i.pinimg.com/564x/61/7d/2a/617d2a349b5c025a3db3ae5cf851be71.jpg",
             "answer": 4,
     }),
