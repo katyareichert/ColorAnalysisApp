@@ -4,6 +4,7 @@
 {% block content %}
     <div class="row bottom-margin case_stud">
         <div class="col-5">
+            <img class="case_image" id="fade_image" src={{data.fade_image}}>
             <img class="case_image" src={{data.image}} id="option1">
             <div class="case_colors">
                 {% for color in data.colors %}
@@ -19,9 +20,18 @@
             <div class="col-10">
                 {{data.caption | safe}}
 
-                <div class="slider"></div>
+                <div class="slider">
+                    <div id="square"></div>
+                </div>
             </div>
         </div>
     </div>
     
+{% endblock %}
+
+{% block scripts%}
+    <script>
+        var slide = '{{data.slide}}';
+    </script>
+    <script src="{{url_for('static', filename='case_study.js')}}"></script>
 {% endblock %}

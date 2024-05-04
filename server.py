@@ -452,6 +452,7 @@ lesson_items = {
                 a high contrast palette. This complements her sharp, intense features.</p>
                 """,
             "image": "/static/img/kendall_high_bw.png",
+            "fade_image": "/static/img/kendall_high.png",
             "colors": ["c5c5c5ff", "aeaeaeff", "878787ff", "515151ff", "000000ff"],
             "slide": 1,
         }),
