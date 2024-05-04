@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-{% extends "learn_layout.html" %}
+{% extends "layout.html" %}
 
 {% block content %}
     <div class="center bottom-margin">
@@ -12,22 +12,34 @@
             <div class="drop-target drop-target1">drop here</div>
         </div>
         <div class="col-6 center padding">
-            <div class="light bottom-padding" id="dnd_container">drag and drop</div>
+            <div class="light bottom-padding" id="inst">drag and drop</div>
             {% for color in data.colors1 %}
                 <div class="draggable draggable1 color_block" style="background-color: #{{color}};"></div>          
             {% endfor %}
             {% for color in data.colors2 %}
                 <div class="draggable draggable2 color_block" style="background-color: #{{color}};"></div>          
             {% endfor %}
+            <div class="purple hide">
+                Try again!
+            </div>
         </div>
         <div class="col-3 center">
             <h3>{{data.class2}}</h3>
             <div class="drop-target drop-target2">drop here</div>
         </div>
     </div>
+
+    <div class="button_bar">
+        <button class="btn btn-outline-success" id="back" type="submit">Back</button>
+        <button class="btn btn-outline-success" id="next" type="submit">Continue</button>
+    </div>
     
 {% endblock %}
 
 {% block scripts %}
+    <script>
+        var next_lesson = '{{data.next_lesson}}';
+        var prev_lesson = '{{data.prev_lesson}}';
+    </script>
     <script src="{{url_for('static', filename='dragndrop.js')}}"></script>
 {% endblock %}

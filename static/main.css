@@ -117,10 +117,6 @@ button {
     margin-left: 40px;
 }
 
-.green {
-    background-color: var(--green);
-}
-
 .drop-target {
     text-align: center;
     color: gray;
@@ -154,7 +150,7 @@ button {
     margin-right: 10px;
     color: black;
     text-align: center;
-    padding-top: 30px;
+    padding-top: 35px;
 }
 
 .draggable {
@@ -333,6 +329,16 @@ button {
     color: var(--lilac);
 }
 
+#next:disabled {
+    border-color: var(--dark-gray);
+    background-color: transparent;
+    color: var(--dark-gray);
+}
+
 .case_stud {
     height: 430px;
+}
+
+.hide {
+    display: none;
 }
