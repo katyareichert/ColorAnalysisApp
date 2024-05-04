@@ -4,6 +4,7 @@ $(document).ready(function() {
     console.log(slide === '1');
 
     if (slide === '1') {
+        $('#fade_image').removeClass('hide');
         $('#fade_image').fadeOut(2000);
         $('#square').animate({
             left: '+=356px'

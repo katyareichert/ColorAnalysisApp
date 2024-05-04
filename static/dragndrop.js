@@ -61,7 +61,7 @@ $( function() {
 
             setTimeout(function() {
                 window.location.href = next_lesson;
-            }, 1500);
+            }, 1100);
 
         } else {
             $(".draggable1").each(function() {

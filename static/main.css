@@ -310,6 +310,9 @@ button {
     width: 380px;
     height: 20px;
     background: linear-gradient(to right, #eb8bafff, #9692d4ff);
+    position: fixed;
+    top: 400px;
+    left: 655px;
 }
 
 .button_bar {
