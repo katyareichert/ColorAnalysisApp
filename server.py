@@ -372,6 +372,7 @@ lesson_items = {
                 allowing her features to shine rather than being overpowered. </p>
                 """,
             "image": "/static/img/rihanna_cool.jpg",
+            "fade_image": "/static/img/rihanna_warm.jpg",
             "colors": ["d7b99fff", "dd9c84ff", "807b73ff", "555454ff", "613924ff"],
             "slide": 1,
         }),
@@ -400,6 +401,7 @@ lesson_items = {
                 creating a vibrant richness to her appearance. </p>
                 """,
             "image": "/static/img/beyonce_warm.png",
+            "fade_image": "/static/img/beyonce_cool.png",
             "colors": ["dfbc7bff", "e3a986ff", "b36d46ff", "9d6f39ff", "644b2fff"],
             "slide": 1,
         }),
@@ -481,6 +483,7 @@ lesson_items = {
                 of the value scale. This conflicts with her features, creating a dissonant look.</p>
                 """,
             "image": "/static/img/kendall_low_bw.png",
+            "fade_image": "/static/img/kendall_low.png",
             "colors": ["eaeaeaff", "d7d7d7ff", "c1c1c1ff", "a6a6a6ff", "808080ff"],
             "slide": 1,
         }),
@@ -510,6 +513,7 @@ lesson_items = {
                 perfectly complementing the openness of Anya's face.</p>
                 """,
             "image": "/static/img/anya_low.png",
+            "fade_image": "/static/img/anya_low.jpg",
             "colors": ["eaeaeaff", "d7d7d7ff", "c1c1c1ff", "a6a6a6ff", "939393ff"],
             "slide": 1,
         }),
@@ -539,6 +543,7 @@ lesson_items = {
                 round eyes and cheekbones.</p>
                 """,
             "image": "/static/img/anya_high.png",
+            "fade_image": "/static/img/anya_high.jpg",
             "colors": ["cdcdcdff", "aeaeaeff", "919191ff", "404040ff", "000000ff"],
             "slide": 1,
         }),
@@ -615,6 +620,7 @@ lesson_items = {
                 personality.</p>
                 """,
             "image": "/static/img/issa_high.png",
+            "fade_image": "/static/img/issa_low.png",
             "colors": ["d884afff", "b35894ff", "2274afff", "175259ff", "012f53ff"],
             "slide": 1,
         }),
@@ -642,6 +648,7 @@ lesson_items = {
                 A more subdued background makes her smile and soft blue eyes the star of the show.</p>
                 """,
             "image": "/static/img/reese_low.png",
+            "fade_image": "/static/img/reese_high.png",
             "colors": ["ffbdcdff", "bdbcffff", "659bcbff", "95e8beff", "8cc1ebff"],
             "slide": 1,
         }),
