@@ -245,6 +245,35 @@ def case_study(data):
     """
     return render_template('case_study.html', data=data)
 
+@app.route('/ld')
+def ld():
+    """
+    TEST
+    """
+    return look_differences(data = {
+            "title": "Chroma Study",
+            "caption": """
+                Look at the <b>subtle hints of color</b> in these ladies' skin tones.
+                """,
+            "image1": "https://i.pinimg.com/736x/71/ee/c1/71eec1e8e5bab02c09189cd695f22b67.jpg",
+            "image2": "https://i.pinimg.com/736x/4e/ad/1b/4ead1b9bd443e8e5c9d0af537fc56a7b.jpg",
+            "left1":"MUTED",
+            "left2":"Low Chroma",
+            "left_mini": "Suits pastel and moody colors",
+            "right1":"SATURATED",
+            "right2":"High Chroma",
+            "right_mini": "Suits bright and intense colors",
+            "colors1": ["ff89a5ff", "b0a7feff", "5294d0ff", "72eabcff", "6fc0ffff"],
+            "colors2": ["ff89a5ff", "b0a7feff", "5294d0ff", "72eabcff", "6fc0ffff"],
+        })
+def look_differences(data):
+    """
+    This or that question test page
+
+    Returns: render template
+    """
+    return render_template('look_differences.html', data=data)
+
 def four_options(data):
     """
     This or that question test page

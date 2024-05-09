@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+{% extends "learn_layout.html" %}
+
+{% block content %}
+
+    <div class="row wide">
+        <div class="col-2 side-img-container">
+            <img class="side-img" src={{data.image1}} id="option1">
+        </div>
+        <div class="col-8">
+            <div class="spacer"></div>
+            <div class="row">
+                <div class="col-12 center look_at">
+                    <p>{{data.caption | safe}}</p>
+                </div>
+            </div>
+            <div class="row" id="check">
+                <div class="col-6 narrow">
+                    <h2>{{data.left1}}</h2>
+                    <h3>{{data.left2}}</h3>
+                    <p class="purple">{{data.left_mini}}</p>
+                    {% for color in data.colors1 %}
+                        <div class="swatch mini" style="background-color: #{{color}};"></div>          
+                    {% endfor %}
+                </div>
+                <div class="col-6 right-align narrow">
+                    <h2>{{data.right1}}</h2>
+                    <h3>{{data.right2}}</h3>
+                    <p class="purple">{{data.right_mini}}</p>
+                    {% for color in data.colors2 %}
+                        <div class="swatch mini" style="background-color: #{{color}};"></div>          
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="col-2 side-img-container">
+            <img class="side-img" src={{data.image2}} id="option1">
+        </div>
+    </div>
+    
+{% endblock %}
+
+{% block scripts%}
+    <script>
+        var slide = '{{data.slide}}';
+    </script>
+    <script src="{{url_for('static', filename='case_study.js')}}"></script>
+{% endblock %}
