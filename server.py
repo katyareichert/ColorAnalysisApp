@@ -339,8 +339,8 @@ lesson_items = {
             "next_lesson": "/learn/undertone/2",
             "class1": "COOL",
             "class2": "WARM",
-            "colors1": ["bd0c42ff", "fa2f56ff", "d72942ff"],
-            "colors2": ["f53310ff", "ca3b1eff", "fc5f47ff"],
+            "colors1": ["bd0c42ff", "335d9cff", "ffe47aff"],
+            "colors2": ["d41f18ff", "06107cff", "ffc974ff"],
         }),
         (color_columns, {
             "title": "Undertone",
@@ -349,45 +349,21 @@ lesson_items = {
             "next_lesson": "/learn/undertone/3",
             "class1": "COOL",
             "class2": "WARM",
-            "colors1": ["bd0c42ff", "fa2f56ff", "d72942ff"],
-            "colors2": ["f53310ff", "ca3b1eff", "fc5f47ff"],
-            "description1": """A cool red leans more towards purple, 
-                suggesting calmness, depth, and similarity to ripe cranberries.""",
-            "description2": """A warm red has hints of orange, embodying vibrancy, 
-                energy, and resembling a fiery sunset."""
+            "colors1": ["bd0c42ff", "335d9cff", "ffe47aff"],
+            "colors2": ["d41f18ff", "06107cff", "ffc974ff"],
+            "description1": """
+                <p>Cool undertones shift the primary colors toward teal blue.</p>
+                <p>A cool red has berry tones and a cool yellow is like a lemon.</p>
+                """,
+            "description2": """
+            <p>Warm undertones shift colors toward brick red.</p>
+            <p>A warm blue is more purple and a warm yellow is like sunshine.</p>
+            """
         }),
-        (drag_and_drop, {
-            "title": "Undertone",
+        (look_differences, {
             "prev_lesson": "/learn/undertone/2",
             "lesson_id": "undertone/3",
             "next_lesson": "/learn/undertone/4",
-            "class1": "COOL",
-            "class2": "WARM",
-            "colors1": ["123a75ff", "335d9bff", "6081afff"],
-            "colors2": ["06107cff", "2437e6ff", "6c77eaff"],
-        }),
-        (color_columns, {
-            "title": "Undertone",
-            "prev_lesson": "/learn/undertone/3",
-            "lesson_id": "undertone/4",
-            "next_lesson": "/learn/undertone/5",
-            "class1": "COOL",
-            "class2": "WARM",
-            "colors1": ["123a75ff", "335d9bff", "6081afff"],
-            "colors2": ["06107cff", "2437e6ff", "6c77eaff"],
-            "description1": """A cool blue leans more teal or gray, evoking a sense of
-                tranquility, akin to the hue of a calm ocean or a clear sky at twilight. 
-                """,
-            "description2": """A warm blue is more vibrant and purple, imbuing it with energy,
-                reminiscent of a tropical paradise.
-                """,
-            "long1": "",
-            "long2": ""
-        }),
-        (look_differences, {
-            "prev_lesson": "/learn/undertone/4",
-            "lesson_id": "undertone/5",
-            "next_lesson": "/learn/undertone/6",
             "caption": """
                 Look at the <b>subtle hints of color</b> in these ladies' skin tones.
                 """,
@@ -404,23 +380,23 @@ lesson_items = {
         }),
         (case_study, {
             "title": "Warm Tones in Conflict",
-            "prev_lesson": "/learn/undertone/5",
-            "lesson_id": "undertone/6",
-            "next_lesson": "/learn/undertone/7",
+            "prev_lesson": "/learn/undertone/3",
+            "lesson_id": "undertone/4",
+            "next_lesson": "/learn/undertone/5",
             "caption": """
                 <p>In warm colors, Rihanna's features hide, dimming her natural radiance. </p>
                 <p>This merging effect distracts from her face, making her overall appearance 
                 lackluster. The outcome is a diminished glow and a less impactful presence.</p>
                 """,
             "image": "/static/img/rihanna_warm.jpg",
-            "colors": ["cda07eff", "dd9c84ff", "b98b31ff", "8c4313ff", "5d2005ff"],
+            "colors": ["dd9c84ff", "cd9278ff", "b98b31ff", "8c4313ff", "5d2005ff"],
             "slide": 0,
         }),
         (case_study, {
             "title": "Cool Tones in Harmony",
-            "prev_lesson": "/learn/undertone/6",
-            "lesson_id": "undertone/7",
-            "next_lesson": "/learn/undertone/8",
+            "prev_lesson": "/learn/undertone/4",
+            "lesson_id": "undertone/5",
+            "next_lesson": "/learn/undertone/6",
             "caption": """
                 <p>What a difference!</p>
                 <p>Notice how your eyes go straight to her face here. She looks a lot more striking,
@@ -428,14 +404,14 @@ lesson_items = {
                 """,
             "image": "/static/img/rihanna_cool.jpg",
             "fade_image": "/static/img/rihanna_warm.jpg",
-            "colors": ["d7b99fff", "dd9c84ff", "807b73ff", "555454ff", "613924ff"],
+            "colors": ["dd9c84ff", "cd9278ff", "807b73ff", "555454ff", "613924ff"],
             "slide": 1,
         }),
         (case_study, {
             "title": "Cool Tones in Conflict",
-            "prev_lesson": "/learn/undertone/7",
-            "lesson_id": "undertone/8",
-            "next_lesson": "/learn/undertone/9",
+            "prev_lesson": "/learn/undertone/5",
+            "lesson_id": "undertone/6",
+            "next_lesson": "/learn/undertone/7",
             "caption": """
                 <p>Cool tones starkly contrasts Beyoncé's warm undertone, making her skin seem more
                 pale and going against her natural aura.</p>
@@ -447,8 +423,8 @@ lesson_items = {
         }),
         (case_study, {
             "title": "Warm Tones in Harmony",
-            "prev_lesson": "/learn/undertone/8",
-            "lesson_id": "undertone/9",
+            "prev_lesson": "/learn/undertone/6",
+            "lesson_id": "undertone/7",
             "next_lesson": "/learn/value/0",
             "caption": """
                 <p>Look at her glow!</p>
@@ -532,39 +508,10 @@ lesson_items = {
             "slide": 1,
         }),
         (case_study, {
-            "title": "Low Contrast in Conflict",
+            "title": "Low Contrast in Harmony",
             "prev_lesson": "/learn/value/4",
             "lesson_id": "value/5",
             "next_lesson": "/learn/value/6",
-            "caption": """
-                <p>The reduced contrast between her hair and skin tone softened her overall appearance,
-                diminishing the dramatic impact of her features. </p>
-                <p>This change shifted the balance, altering the harmony of her natural aesthetic.</p>
-                """,
-            "image": "/static/img/kendall_low.png",
-            "colors": ["dbb89dff", "bf7f63ff", "b8a786ff", "a37f4dff", "6c4436ff"],
-            "slide": 0,
-        }),
-        (case_study, {
-            "title": "Low Contrast in Conflict",
-            "prev_lesson": "/learn/value/5",
-            "lesson_id": "value/6",
-            "next_lesson": "/learn/value/7",
-            "caption": """
-                <p>See how the range of values has changed from Kendall's first photo.</p>
-                <p>Clearly, the range of values is smaller, all concentrated on the light end
-                of the value scale. This conflicts with her features, creating a dissonant look.</p>
-                """,
-            "image": "/static/img/kendall_low_bw.png",
-            "fade_image": "/static/img/kendall_low.png",
-            "colors": ["eaeaeaff", "d7d7d7ff", "c1c1c1ff", "a6a6a6ff", "808080ff"],
-            "slide": 1,
-        }),
-        (case_study, {
-            "title": "Low Contrast in Harmony",
-            "prev_lesson": "/learn/value/6",
-            "lesson_id": "value/7",
-            "next_lesson": "/learn/value/8",
             "caption": """
                 <p>On the other hand, Anya Taylor-Joy thrives in a low-contrast palette.</p>
                 <p>Bright tones with subtle contrast complement Anya Taylor-Joy's features flawlessly,
@@ -577,9 +524,9 @@ lesson_items = {
         }),
         (case_study, {
             "title": "Low Contrast in Harmony",
-            "prev_lesson": "/learn/value/7",
-            "lesson_id": "value/8",
-            "next_lesson": "/learn/value/9",
+            "prev_lesson": "/learn/value/5",
+            "lesson_id": "value/6",
+            "next_lesson": "/learn/chroma/0",
             "caption": """
                 <p>Look at how similar all these tones are.</p>
                 <p>The reduced contrast between her hair and skin tone softens her overall appearance,
@@ -588,36 +535,6 @@ lesson_items = {
             "image": "/static/img/anya_low.png",
             "fade_image": "/static/img/anya_low.jpg",
             "colors": ["eaeaeaff", "d7d7d7ff", "c1c1c1ff", "a6a6a6ff", "939393ff"],
-            "slide": 1,
-        }),
-        (case_study, {
-            "title": "High Contrast in Conflict",
-            "prev_lesson": "/learn/value/8",
-            "lesson_id": "value/9",
-            "next_lesson": "/learn/value/10",
-            "caption": """
-                <p>High contrast doesn't flatter her features as it can overwhelm her delicate
-                complexion and draw attention away from her natural elegance.</p>
-                <p>She also looks less confident!</p>
-                """,
-            "image": "/static/img/anya_high.jpg",
-            "colors": ["ecc9bfff", "deaf9eff", "b21703ff", "63191bff", "272526ff"],
-            "slide": 0,
-        }),
-        (case_study, {
-            "title": "High Contrast in Conflict",
-            "prev_lesson": "/learn/value/9",
-            "lesson_id": "value/10",
-            "next_lesson": "/learn/chroma/0",
-            "caption": """
-                <p>The value range has totally changed!</p>
-                <p>Here, the extremely dark hair, makeup, and clothes look completely separate
-                from Anya's fair complexion. She looks almost eerie, far too intense for her
-                round eyes and cheekbones.</p>
-                """,
-            "image": "/static/img/anya_high.png",
-            "fade_image": "/static/img/anya_high.jpg",
-            "colors": ["cdcdcdff", "aeaeaeff", "919191ff", "404040ff", "000000ff"],
             "slide": 1,
         }),
     ],
