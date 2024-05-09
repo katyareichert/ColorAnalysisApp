@@ -395,6 +395,7 @@ button {
 .look_at {
     vertical-align: middle;
     padding-top: 50px;
+    height: 170px;
 }
 
 .mini {

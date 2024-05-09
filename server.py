@@ -384,11 +384,29 @@ lesson_items = {
             "long1": "",
             "long2": ""
         }),
-        (case_study, {
-            "title": "Warm Tones in Conflict",
+        (look_differences, {
             "prev_lesson": "/learn/undertone/4",
             "lesson_id": "undertone/5",
             "next_lesson": "/learn/undertone/6",
+            "caption": """
+                Look at the <b>subtle hints of color</b> in these ladies' skin tones.
+                """,
+            "image1": "/static/img/cool.jpg",
+            "image2": "https://i.pinimg.com/736x/6b/f5/3c/6bf53c17c6e22d1f588bf1c7355bda2d.jpg",
+            "left1":"COOL",
+            "left2":"Undertone",
+            "left_mini": "Pink and gray-ish tones",
+            "right1":"WARM",
+            "right2":"Undertone",
+            "right_mini": "Orange and yellow-ish tones",
+            "colors1": ["edc9baff", "d5a792ff", "c1856fff", "8c5d4dff", "6c4d42ff"],
+            "colors2": ["c38666ff", "a7694dff", "864034ff", "632a1cff", "491b0dff"],
+        }),
+        (case_study, {
+            "title": "Warm Tones in Conflict",
+            "prev_lesson": "/learn/undertone/5",
+            "lesson_id": "undertone/6",
+            "next_lesson": "/learn/undertone/7",
             "caption": """
                 <p>In warm colors, Rihanna's features hide, dimming her natural radiance. </p>
                 <p>This merging effect distracts from her face, making her overall appearance 
@@ -400,9 +418,9 @@ lesson_items = {
         }),
         (case_study, {
             "title": "Cool Tones in Harmony",
-            "prev_lesson": "/learn/undertone/5",
-            "lesson_id": "undertone/6",
-            "next_lesson": "/learn/undertone/7",
+            "prev_lesson": "/learn/undertone/6",
+            "lesson_id": "undertone/7",
+            "next_lesson": "/learn/undertone/8",
             "caption": """
                 <p>What a difference!</p>
                 <p>Notice how your eyes go straight to her face here. She looks a lot more striking,
@@ -415,9 +433,9 @@ lesson_items = {
         }),
         (case_study, {
             "title": "Cool Tones in Conflict",
-            "prev_lesson": "/learn/undertone/6",
-            "lesson_id": "undertone/7",
-            "next_lesson": "/learn/undertone/8",
+            "prev_lesson": "/learn/undertone/7",
+            "lesson_id": "undertone/8",
+            "next_lesson": "/learn/undertone/9",
             "caption": """
                 <p>Cool tones starkly contrasts Beyoncé's warm undertone, making her skin seem more
                 pale and going against her natural aura.</p>
@@ -429,8 +447,8 @@ lesson_items = {
         }),
         (case_study, {
             "title": "Warm Tones in Harmony",
-            "prev_lesson": "/learn/undertone/7",
-            "lesson_id": "undertone/8",
+            "prev_lesson": "/learn/undertone/8",
+            "lesson_id": "undertone/9",
             "next_lesson": "/learn/value/0",
             "caption": """
                 <p>Look at her glow!</p>
@@ -465,11 +483,29 @@ lesson_items = {
             "keywords2": "Associated with coziness, intimate atmospheres, and captivating intensity.",
             "colors": ["f3f3f3ff", "d9d9d9ff", "b7b7b7ff", "666666ff", "434343ff", "1e1e1eff"]
         }),
-        (case_study, {
-            "title": "High Contrast in Harmony",
+        (look_differences, {
             "prev_lesson": "/learn/value/1",
             "lesson_id": "value/2",
             "next_lesson": "/learn/value/3",
+            "caption": """
+                Look at the <b>difference in value</b> between these ladies'<br>hair color, eye color, and skin tone.
+                """,
+            "image1": "https://i.pinimg.com/736x/af/3e/13/af3e13eee0365c5fc7afc608cde6b2fb.jpg",
+            "image2": "https://i.pinimg.com/736x/d3/59/1c/d3591cddd40b48c0be3b31b39bb49b59.jpg ",
+            "left1":"LOW",
+            "left2":"Contrast",
+            "left_mini": "Very similar in value — all pale",
+            "right1":"HIGH",
+            "right2":"Contrast",
+            "right_mini": "Very different — both light and dark",
+            "colors1": ["d7d7d7ff", "c1c1c1ff", "a6a6a6ff", "939393ff", "808080ff"],
+            "colors2": ["d7d7d7ff", "c1c1c1ff", "878787ff", "515151ff", "000000ff"],
+        }),
+        (case_study, {
+            "title": "High Contrast in Harmony",
+            "prev_lesson": "/learn/value/2",
+            "lesson_id": "value/3",
+            "next_lesson": "/learn/value/4",
             "caption": """
                 <p>Kendall Jenner's dark hair, piercing brown eyes, and fair skin create a
                 striking high-contrast, accentuating her features with a bold allure. </p>
@@ -482,9 +518,9 @@ lesson_items = {
         }),
         (case_study, {
             "title": "High Contrast in Harmony",
-            "prev_lesson": "/learn/value/2",
-            "lesson_id": "value/3",
-            "next_lesson": "/learn/value/4",
+            "prev_lesson": "/learn/value/3",
+            "lesson_id": "value/4",
+            "next_lesson": "/learn/value/5",
             "caption": """
                 <p>Look at the range of values picked from the photo. </p>
                 <p>Kendall's lightest and darkest values are very distant in tone, creating
@@ -497,9 +533,9 @@ lesson_items = {
         }),
         (case_study, {
             "title": "Low Contrast in Conflict",
-            "prev_lesson": "/learn/value/3",
-            "lesson_id": "value/4",
-            "next_lesson": "/learn/value/5",
+            "prev_lesson": "/learn/value/4",
+            "lesson_id": "value/5",
+            "next_lesson": "/learn/value/6",
             "caption": """
                 <p>The reduced contrast between her hair and skin tone softened her overall appearance,
                 diminishing the dramatic impact of her features. </p>
@@ -511,9 +547,9 @@ lesson_items = {
         }),
         (case_study, {
             "title": "Low Contrast in Conflict",
-            "prev_lesson": "/learn/value/4",
-            "lesson_id": "value/5",
-            "next_lesson": "/learn/value/6",
+            "prev_lesson": "/learn/value/5",
+            "lesson_id": "value/6",
+            "next_lesson": "/learn/value/7",
             "caption": """
                 <p>See how the range of values has changed from Kendall's first photo.</p>
                 <p>Clearly, the range of values is smaller, all concentrated on the light end
@@ -526,9 +562,9 @@ lesson_items = {
         }),
         (case_study, {
             "title": "Low Contrast in Harmony",
-            "prev_lesson": "/learn/value/5",
-            "lesson_id": "value/6",
-            "next_lesson": "/learn/value/7",
+            "prev_lesson": "/learn/value/6",
+            "lesson_id": "value/7",
+            "next_lesson": "/learn/value/8",
             "caption": """
                 <p>On the other hand, Anya Taylor-Joy thrives in a low-contrast palette.</p>
                 <p>Bright tones with subtle contrast complement Anya Taylor-Joy's features flawlessly,
@@ -541,9 +577,9 @@ lesson_items = {
         }),
         (case_study, {
             "title": "Low Contrast in Harmony",
-            "prev_lesson": "/learn/value/6",
-            "lesson_id": "value/7",
-            "next_lesson": "/learn/value/8",
+            "prev_lesson": "/learn/value/7",
+            "lesson_id": "value/8",
+            "next_lesson": "/learn/value/9",
             "caption": """
                 <p>Look at how similar all these tones are.</p>
                 <p>The reduced contrast between her hair and skin tone softens her overall appearance,
@@ -556,9 +592,9 @@ lesson_items = {
         }),
         (case_study, {
             "title": "High Contrast in Conflict",
-            "prev_lesson": "/learn/value/7",
-            "lesson_id": "value/8",
-            "next_lesson": "/learn/value/9",
+            "prev_lesson": "/learn/value/8",
+            "lesson_id": "value/9",
+            "next_lesson": "/learn/value/10",
             "caption": """
                 <p>High contrast doesn't flatter her features as it can overwhelm her delicate
                 complexion and draw attention away from her natural elegance.</p>
@@ -570,8 +606,8 @@ lesson_items = {
         }),
         (case_study, {
             "title": "High Contrast in Conflict",
-            "prev_lesson": "/learn/value/8",
-            "lesson_id": "value/9",
+            "prev_lesson": "/learn/value/9",
+            "lesson_id": "value/10",
             "next_lesson": "/learn/chroma/0",
             "caption": """
                 <p>The value range has totally changed!</p>
@@ -603,6 +639,8 @@ lesson_items = {
             "next_lesson": "/learn/chroma/2",
             "class1": "MUTED",
             "class2": "SATURATED",
+            "keywords1": "Associated with tranquility, vintage aesthetics, and understated elegance.",
+            "keywords2": "Associated with energy, excitement, dynamism, and impactful visuals.",
             "colors": ["989698ff", "937e96ff", "8f6191ff", "8e4d91ff", "8a378eff", "8b2c8eff"]
         }),
         (drag_and_drop, {
@@ -631,11 +669,30 @@ lesson_items = {
             "long1": "",
             "long2": ""
         }),
-        (case_study, {
-            "title": "Muted Colors in Conflict",
+        (look_differences, {
             "prev_lesson": "/learn/chroma/3",
             "lesson_id": "chroma/4",
             "next_lesson": "/learn/chroma/5",
+            "caption": """
+                Look at the <b>color intensity</b> of these ladies'
+                <br>hair color, eye color, and skin tone.
+                """,
+            "image1": "/static/img/muted.jpg",
+            "image2": "/static/img/saturated.jpg",
+            "left1":"MUTED",
+            "left2":"Low Chroma",
+            "left_mini": "Suits pastel and moody colors",
+            "right1":"SATURATED",
+            "right2":"High Chroma",
+            "right_mini": "Suits intense and bright colors",
+            "colors1": ["efaf96ff", "eb9187ff", "aa7984ff", "7d7695ff", "61708bff"],
+            "colors2": ["ffaf90ff", "f67a6fff", "cd5c74ff", "6f629dff", "375895ff"],
+        }),
+        (case_study, {
+            "title": "Muted Colors in Conflict",
+            "prev_lesson": "/learn/chroma/4",
+            "lesson_id": "chroma/5",
+            "next_lesson": "/learn/chroma/6",
             "caption": """
                 <p>Issa Rae looks stunning, but these muted colors are holding her back.</p>
                 <p>Her skin and eyes look a little dull, fighting against her naturally bright complexion.
@@ -647,9 +704,9 @@ lesson_items = {
         }),
         (case_study, {
             "title": "Saturated Colors in Harmony",
-            "prev_lesson": "/learn/chroma/4",
-            "lesson_id": "chroma/5",
-            "next_lesson": "/learn/chroma/6",
+            "prev_lesson": "/learn/chroma/5",
+            "lesson_id": "chroma/6",
+            "next_lesson": "/learn/chroma/7",
             "caption": """
                 <p>She’s glowing!</p>
                 <p>These saturated colors bring so much life back into Issa's face. Vibrant colors
@@ -663,9 +720,9 @@ lesson_items = {
         }),
         (case_study, {
             "title": "Saturated Colors in Conflict",
-            "prev_lesson": "/learn/chroma/5",
-            "lesson_id": "chroma/6",
-            "next_lesson": "/learn/chroma/7",
+            "prev_lesson": "/learn/chroma/6",
+            "lesson_id": "chroma/7",
+            "next_lesson": "/learn/chroma/8",
             "caption": """
                 <p>Conversely, Reese Witherspoon feels overwhelmed by the intensity of the colors here.</p>
                 <p>The bright shades make her face seem tired, pulling our attention away from her features.</p>
@@ -676,8 +733,8 @@ lesson_items = {
         }),
         (case_study, {
             "title": "Muted Colors in Harmony",
-            "prev_lesson": "/learn/chroma/6",
-            "lesson_id": "chroma/7",
+            "prev_lesson": "/learn/chroma/7",
+            "lesson_id": "chroma/8",
             "next_lesson": "/quiz",
             "caption": """
                 <p>Here she can breathe!</p>
