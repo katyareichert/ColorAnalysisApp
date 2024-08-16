@@ -9,3 +9,5 @@ The degree of lightness or darkness of a color, independent of its hue or chroma
 
 ### Chroma
 The purity or intensity of a color, representing its saturation or vividness relative to a neutral gray of the same lightness.
+
+View the [full demo here](https://youtu.be/f23SNBC3wLM)!
